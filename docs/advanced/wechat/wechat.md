@@ -8,7 +8,6 @@
 
 ①②③④⑤ 群已满，下面是 ⑥ 群。
 
-<!-- ![alt text](https://oss.laf.run/ukw0y1-site/unibest-discussion-group/qq.jpg) -->
 <FreshImage src="https://oss.laf.run/ukw0y1-site/unibest-discussion-group/qq.jpg" alt="QQ群二维码" />
 
 > QQ 群永久有效，微信群 7 天就过期。QQ 群无需每 7 天替换一次。
