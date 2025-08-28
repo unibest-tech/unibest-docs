@@ -2,6 +2,8 @@
 
 ## 引言
 
+> 2025-08-28 更新， `route-block` 在 `v3.12.0` 已被 `definePage` 替代，一下内容已过时，仅供参考
+
 有群友第一次看到 `unibest` 里面 `vue` 文件 `route-block` 这种写法，表示很奇怪，从来没见过！
 
 ```vue
@@ -18,6 +20,43 @@
   <view class="text-green-500">菲鸽，你好，我喜欢你！</view>
 </template>
 ```
+
+大改版，最新版使用 `definePage` 替代 `route-block`，
+
+- 对象形式（静态配置）：
+
+```js
+definePage({
+  style: {
+    navigationBarTitleText: '首页',
+  },
+});
+```
+
+- 函数形式（动态计算）：
+
+```js
+definePage(() => ({
+  style: {
+    navigationBarTitleText: computedTitle(),
+  },
+}));
+```
+
+- 异步函数形式（异步数据获取）：
+
+```js
+definePage(async () => {
+  const title = await fetchPageTitle();
+  return {
+    style: {
+      navigationBarTitleText: title,
+    },
+  };
+});
+```
+
+更多详情请看：[definePage](https://uni-helper.js.org/blog/definepage)
 
 <!--
 ## uni 插件总览
