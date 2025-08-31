@@ -3,8 +3,8 @@
 - 前置依赖
 
   - **Node.js** - `>=v20` (我的是 `v22.13.0`)
-  - **pnpm** - `>=9+` (我的是 `10.11.0`)
-  - **`VSCode`** - 可选 `WebStorm`
+  - **pnpm** - `>=9+` (我的是 `10.10.0`)
+  - **`VSCode`**系（`VS Code`, `Trae`, `Cursor`），可选 `WebStorm`
   - **`HBuilderX`** - `APP` 的运行和发布还是离不开它
 
   > 注意：windows 电脑在 nodejs 超过 `v22.14` 时，运行会报错。问题和解决方法见 [github issue 219](https://github.com/unibest-tech/unibest/issues/219)
