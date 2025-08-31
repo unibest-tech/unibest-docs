@@ -57,13 +57,6 @@ git commit -m "feat: init project"
 - 若代码里面自动引入的 `API` 报错，只需要 `pnpm dev` 即可。
 - 若代码运行后，`H5端` 浏览器界面底部没有 `tabbar`， 刷新浏览器或者再次 `pnpm dev` 即可。
 
-## 项目仓库地址
-
-`github` 和 `gitee` 实时同步，代码一致。
-
-- https://github.com/unibest-tech/unibest
-- https://gitee.com/feige996/unibest
-
 ## 旧的模板生成相关内容
 
 ::: details 下面的在 2025-06-21 发布 v2.0.0 之后过期了

@@ -6,6 +6,8 @@ export function getGuideSidebar() {
             collapsed: false,
             items: [
                 { text: 'unibest是什么', link: 'introduction' },
+                { text: '谁在用', link: 'who-are-use' },
+                { text: '项目仓库', link: 'repo' },
                 { text: '快速开始', link: 'getting-started' },
                 { text: '运行发布', link: 'run-and-build' },
                 // { text: '部署', link: 'deploy' },
