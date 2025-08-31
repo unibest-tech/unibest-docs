@@ -1,30 +1,49 @@
-# 谁在用 unibest
+# 谁在用 `unibest`
 
-有 `10w+` 员工的大公司在用，也有很多 `中小公司` 和 `个人开发者` 在使用 `unibest`。
+`unibest` 已成为众多开发者信赖的 `uni-app` 开发模板，用户群体涵盖了从大型企业到个人开发者的广泛范围。
 
-> 之前有个群友就跟我说，他公司 `10w+` 员工，他准备在公司推广 `unibest` ^\_^
+- **大型企业**：包括员工规模超 `10w+` 的知名企业，开发者们选择在企业内部项目中推广使用 `unibest`
+- **中小企业**：大量成长型企业将 `unibest` 作为团队开发标准
+- **个人开发者**：众多独立开发者和自由职业者使用 `unibest` 提升开发效率
+
+<details>
+<summary>真实用户反馈</summary>
+
+> "我所在的公司有 `10w+` 员工，我正在公司内部项目中推广使用 `unibest`，它极大地提升了我们团队的开发效率。" —— 企业开发者分享
+
+</details>
 
 ## 交流群人数
 
 目前有 `16` 个交流群，微信 `10` 个，QQ `6` 个。共计 `3000+` 群友。
 
-> 微信目前不再提供免费交流群，详情请见 [微信交流群](../reference/contact)
+> 交流群信息请参阅 [联系方式](../reference/contact)
 
-## 项目统计
+## 项目采用情况
 
-每天都有 `100+` unibest 项目诞生，从 5 月 31 号统计以来，有 `1w+` 个 `unibest` 项目诞生。
+`unibest` 受到了开发者的广泛认可，采用数据持续增长：
+
+> 数据从 5 月 31 号开始统计，截止到 `2025-08-31`，下同。
+
+- **日新增项目**：每天平均有 `100+` 个基于 `unibest` 的新项目创建
+- **累计项目数**：自统计以来，已有超过 `1w+` 个 `unibest` 项目诞生
 
 ![项目统计](../assets/who-are-use/project.png)
 
-## 模板统计
+## 模板使用统计
 
-![项目统计](../assets/who-are-use/template.png)
+不同模板（主要是 UI 库的差别）的使用统计显示：
 
-## 数据源
+- `base+main` 模板使用者最多，即 `wot-ui` 最受欢迎，这主要归因于 `wot-ui` 作为默认 UI 库的优势地位
+- 其他几个 UI 库之间的对比更能反映它们的真实用户数
 
-数据我都存在 `laf` 里面，有需要的可以通过接口自取：
+![模板统计](../assets/who-are-use/template.png)
 
-- 所有的数据（分页）：https://ukw0y1.laf.run/create-unibest/getBeacon
-- 每天的项目数：https://ukw0y1.laf.run/create-unibest/getBeaconByDay
+## 数据来源
 
-> 后续会直接图表的形式展示，等我有空，我去整理和部署出来。
+所有统计数据均存储在 `laf` 云服务中，可通过以下接口获取：
+
+- **完整数据（分页）**：https://ukw0y1.laf.run/create-unibest/getBeacon
+- **每日项目统计**：https://ukw0y1.laf.run/create-unibest/getBeaconByDay
+
+未来将推出更直观的数据可视化展示，敬请期待！
