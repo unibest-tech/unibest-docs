@@ -31,7 +31,7 @@ export function getGuideSidebar() {
             text: '基础专题',
             collapsed: false,
             items: [
-                { text: 'UI 库', link: 'ui' },
+                { text: 'UI 库', link: 'ui-lib' },
                 { text: '样式', link: 'style' },
                 { text: '图标', link: 'icon' },
                 { text: 'SVG', link: 'svg' },

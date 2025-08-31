@@ -17,7 +17,9 @@
 
 `unibest` 内置了 `约定式路由`、`layout布局`、`请求封装`、`请求拦截`、`登录拦截`、`UnoCSS`、`i18n多语言` 等基础功能，提供了 `代码提示`、`自动格式化`、`统一配置`、`代码片段` 等辅助功能，让你编写 `uniapp` 拥有 `best` 体验 （ `unibest 的由来`）。
 
-> `unibest` 目前支持 `H5`、`小程序` 和 `App`。
+> `unibest` 支持全平台，即包括 `H5`、`小程序`、`App`、`快应用` 等，因为需要引入 UI 库，所以需要看 UI 库的平台支持性。
+
+目前 `unibest` 支持的 UI 库有 `wot-ui`、`uv-ui`、`view-plus`、`view-pro`、`sard-ui`、`skiyee-ui` 等，详情请看 [UI 库](../guide/ui-lib) 。
 
 ::: tip ⭐⭐⭐⭐⭐
 如果 `unibest` 对您有帮助，希望你可以去 **Github** 或者 **Gitee(码云)** 帮我点个 ⭐ ，这将是对我极大的鼓励。
