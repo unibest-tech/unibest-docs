@@ -35,7 +35,6 @@ export function getGuideSidebar() {
                 { text: 'SVG', link: 'svg' },
                 { text: '自动生成接口', link: 'request-generate' },
                 { text: '状态管理', link: 'state' },
-                { text: 'hbx 模板', link: 'hbx' },
             ],
         },
         {

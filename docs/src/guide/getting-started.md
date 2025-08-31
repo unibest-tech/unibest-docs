@@ -7,6 +7,8 @@
   - **`VSCode`** - 可选 `WebStorm`
   - **`HBuilderX`** - `APP` 的运行和发布还是离不开它
 
+  > 注意：windows 电脑在 nodejs 超过 `v22.14` 时，运行会报错。问题和解决方法见 [github issue 219](https://github.com/unibest-tech/unibest/issues/219)
+
 ## 创建项目
 
 通过下面的命令可以快速生成项目模板，`pnpm create unibest <项目名称>` ，如果不写 `<项目名称>` 会进入命令行交互模式。
@@ -20,17 +22,7 @@ pnpm create unibest@latest
 
 实际操作截图如下：
 
-<!-- `create-unibest` 在 `v1.10.0` 开始会有版本号，如下：
-
-![alt text](./assets/2-2.png)
-
-`2025-06-21` 发布 `v2.0.0` 精简了很多模板，`base`、`tabbar`、`spa` 合并成了新的 `base` 模板（新的 `base` 模板可以在代码层面得到所有的四种 `tabbar` 形式），同时去掉了 `hbx-base`、`hbx-demo`。
-
-最新的模板支持如下： -->
-
-![alt text](image-1.png)
-
-新的 `base` 模板如何切换不同的 tabbar, 见 [tabbar 专题](./2-tabbar.md)
+![alt text](../assets/getting-started/create-unibest.png)
 
 ## 安装、运行
 
@@ -43,7 +35,7 @@ pnpm dev:app # 运行App
 
 `pnpm dev` 之后在浏览器打开 `http://localhost:9000/`。
 
-> 其他平台构建和发布，查看 [运行发布篇](./11-build)。
+> 其他平台构建和发布，查看 [运行发布篇](./run-and-build)。
 
 ## 第一次 `commit`
 
@@ -52,17 +44,13 @@ git add .
 git commit -m "feat: init project"
 ```
 
-## 必看章节
-
-[uni 插件篇](/base/3-plugin) 和 [常见问题](/base/14-faq)
-
 ## `v3` 代码块
 
 在 `vue` 文件中，输入 `v3` 按 `tab` 即可快速生成页面模板，可以大大加快页面生成。
 
 > 原理：基于 `VSCode` 代码块生成。
 
-![alt text](./assets/2-4.gif)
+![alt text](../assets/getting-started/v3.gif)
 
 ## 注意事项
 
@@ -73,17 +61,8 @@ git commit -m "feat: init project"
 
 `github` 和 `gitee` 实时同步，代码一致。
 
-### 普通模板：
-
 - https://github.com/unibest-tech/unibest
 - https://gitee.com/feige996/unibest
-
-> `demo` 模板是在 `hello-unibest` 项目中，仓库地址如下：
-
-- https://github.com/feige996/hello-unibest
-- https://gitee.com/feige996/hello-unibest
-
-> 未来 `github` 上的仓库都可能迁移到 `unibest-tech` 组织下。
 
 ## 旧的模板生成相关内容
 
