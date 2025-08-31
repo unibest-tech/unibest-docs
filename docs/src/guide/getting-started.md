@@ -35,6 +35,8 @@ pnpm dev:app # 运行App
 
 `pnpm dev` 之后在浏览器打开 `http://localhost:9000/`。
 
+运行其他平台之前请先运行一次 `pnpm dev`，确保项目正常运行。
+
 > 其他平台构建和发布，查看 [运行发布篇](./run-and-build)。
 
 ## 第一次 `commit`
