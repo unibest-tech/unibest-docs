@@ -105,7 +105,7 @@ onUnmounted(() => {
 });
 
 const confirm = () => {
-  window.open('/blog/2', '_blank');
+  // window.open('/blog/2', '_blank');
   dialogVisible.value = false;
   markFormSubmitted();
 };
