@@ -4,7 +4,7 @@
     <VPLayout>
       <template #layout-bottom>
         <footer class="footer">
-          <p>© 2024 菲鸽科技</p>
+          <p>© 2025 菲鸽科技</p>
           <p><a href="https://beian.miit.gov.cn" target="_blank">粤ICP备2024160998号</a></p>
           <BuildInfo />
         </footer>
@@ -14,7 +14,7 @@
 </template>
 
 <script setup>
-import VPLayout from '@theme-default/Layout.vue'
+import VPLayout from '@theme-default/Layout.vue';
 </script>
 
 <style scoped>
