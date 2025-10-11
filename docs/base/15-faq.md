@@ -20,13 +20,13 @@
 - 2.页面使用
 
 ```ts
-import { useMessage } from 'wot-design-uni'
+import { useMessage } from 'wot-design-uni';
 
-const message = useMessage()
+const message = useMessage();
 const handleClick = () => {
   // 顺便测试 message 的使用
-  message.show('显示隐藏切换')
-}
+  message.show('显示隐藏切换');
+};
 ```
 
 ## 2. `uni-app` 插件市场的插件如何使用？
@@ -107,9 +107,9 @@ const handleClick = () => {
 </template>
 
 <script setup>
-import { ref } from 'vue'
+import { ref } from 'vue';
 
-const editorIns = ref(null)
+const editorIns = ref(null);
 
 /**
  * 获取输入内容
@@ -117,7 +117,7 @@ const editorIns = ref(null)
  */
 function inputOver(e) {
   // 可以在此处获取到编辑器已编辑的内容
-  console.log('==== inputOver :', e)
+  console.log('==== inputOver :', e);
 }
 
 /**
@@ -126,7 +126,7 @@ function inputOver(e) {
  */
 function overMax(e) {
   // 若设置了最大字数限制，可在此处触发超出限制的回调
-  console.log('==== overMax :', e)
+  console.log('==== overMax :', e);
 }
 
 /**
@@ -136,9 +136,9 @@ function overMax(e) {
  * @tutorial 相关api https://uniapp.dcloud.net.cn/api/media/editor-context.html
  */
 function initEditor(editor) {
-  editorIns.value = editor // 保存编辑器实例
+  editorIns.value = editor; // 保存编辑器实例
   // 保存编辑器实例后，可以在此处获取后端数据，并赋值给编辑器初始化内容
-  preRender()
+  preRender();
 }
 
 function preRender() {
@@ -146,8 +146,8 @@ function preRender() {
     // 异步获取后端数据后，初始化编辑器内容
     editorIns.value.setContents({
       html: `<div>&nbsp;&nbsp;猫猫<img src="https://img.yzcdn.cn/vant/cat.jpeg"/></div>`,
-    })
-  }, 1000)
+    });
+  }, 1000);
 }
 
 /**
@@ -170,7 +170,7 @@ function upinImage(tempFiles, editorCtx) {
     src: tempFiles[0].tempFilePath,
     width: '80%', // 默认不建议铺满宽度100%，预留一点空隙以便用户编辑
     success: function () {},
-  })
+  });
   // #endif
 
   // #ifndef MP-WEIXIN
@@ -178,7 +178,7 @@ function upinImage(tempFiles, editorCtx) {
     src: tempFiles[0].path,
     width: '80%', // 默认不建议铺满宽度100%，预留一点空隙以便用户编辑
     success: function () {},
-  })
+  });
   // #endif
 
   /**
@@ -218,9 +218,9 @@ function exportHtml(e) {
       // 传至导出页面解析即可
       res.eventChannel.emit('e-transmit-html', {
         data: e,
-      })
+      });
     },
-  })
+  });
 }
 
 /**
@@ -228,7 +228,7 @@ function exportHtml(e) {
  * @param {Object} e { text: '链接描述', href: '链接地址' }
  */
 function addLink(e) {
-  console.log('==== addLink :', e)
+  console.log('==== addLink :', e);
 }
 </script>
 ```
@@ -282,3 +282,35 @@ access_token expired [20250103 17:08:03][touristappid]"}
 ```
 
 > 解答：游客模式会出现该错误，微信扫码登录一下就可以了。
+
+## 7. unibest 如何运行 在钉钉小程序
+
+package.json 中添加如下脚本：
+
+```json
+{
+  "uni-app": {
+    "scripts": {
+      "mp-dingtalk": {
+        "title": "钉钉小程序",
+        "env": {
+          "UNI_PLATFORM": "mp-alipay"
+        },
+        "define": {
+          "MP-DINGTALK": true
+        }
+      }
+    }
+  }
+}
+```
+
+scripts 中添加如下脚本：
+
+```json
+{
+  "scripts": {
+    "dev:mp-dingtalk": "uni -p mp-dingtalk"
+  }
+}
+```
