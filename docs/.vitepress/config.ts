@@ -217,6 +217,7 @@ export default defineConfig({
         items: [
           { text: 'unibest 3.11 发布了', link: '2' },
           { text: 'unibest 3.0 发布了', link: '1' },
+          { text: '小程序有静默登录，为啥还需要设计 `token`', link: '3' },
         ],
       },
       {
