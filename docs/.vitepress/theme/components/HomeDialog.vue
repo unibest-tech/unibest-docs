@@ -1,17 +1,24 @@
 <template>
   <ElDialog
     v-model="dialogVisible"
-    title="unibest问卷调查（2个问题）"
+    title="unibest 需要您的投票支持"
     :show-close="false"
     :close-on-click-modal="false"
     width="500px"
     style="margin-top: 30vh; max-width: 90%"
     class="rounded-lg shadow-lg"
   >
-    <p>耽误你20s，完成以下问卷调查</p>
+    <p>
+      我正在参加 Gitee 2025
+      最受欢迎的开源软件投票活动，快来给我投票吧！https://gitee.com/activity/2025opensource?ident=I6ZL1D
+    </p>
+    <br />
+    <p>还没投的，多帮我投投，人家都1000+票了，我500都还没有。谢谢兄弟们了~</p>
+    <br />
+    <p style="color: green">每个人可以投 1 票，谢谢~</p>
     <template #footer>
       <div class="flex justify-end gap-2">
-        <!-- <ElButton @click="dialogVisible = false">取消</ElButton> -->
+        <ElButton @click="dialogVisible = false">已经投票</ElButton>
         <ElButton type="primary" @click="confirm">确定前往</ElButton>
       </div>
     </template>
@@ -40,7 +47,7 @@ const isPC = () => {
 };
 
 // 本地存储键名常量
-const STORAGE_KEY = 'userFormSubmitted';
+const STORAGE_KEY = 'unibest-dialog-shown';
 
 // 检查本地存储中是否已填写过表单
 const checkFormSubmitted = () => {
@@ -89,7 +96,8 @@ onUnmounted(() => {
 });
 
 const confirm = () => {
-  window.open('https://docs.qq.com/form/page/DVVF0TEdmY2ZHV3RE', '_blank');
+  // window.open('https://docs.qq.com/form/page/DVVF0TEdmY2ZHV3RE', '_blank');
+  window.open('https://gitee.com/activity/2025opensource?ident=I6ZL1D', '_blank');
   dialogVisible.value = false;
   markFormSubmitted();
 };
