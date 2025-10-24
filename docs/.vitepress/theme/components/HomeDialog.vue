@@ -18,7 +18,7 @@
     <p style="color: green">每个人可以投 1 票，谢谢~</p>
     <template #footer>
       <div class="flex justify-end gap-2">
-        <ElButton @click="dialogVisible = false">已经投票</ElButton>
+        <ElButton @click="confirm">已经投票</ElButton>
         <ElButton type="primary" @click="confirm">确定前往</ElButton>
       </div>
     </template>
