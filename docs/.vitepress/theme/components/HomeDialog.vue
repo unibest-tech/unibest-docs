@@ -13,7 +13,7 @@
       最受欢迎的开源软件投票活动，快来给我投票吧！https://gitee.com/activity/2025opensource?ident=I6ZL1D
     </p>
     <br />
-    <p>还没投的，多帮我投投，人家都1000+票了，我500都还没有。谢谢兄弟们了~</p>
+    <p>还没投的，多帮我投投，人家都500+票了，我200都还没有。谢谢兄弟们了~</p>
     <br />
     <p style="color: green">每个人可以投 1 票，谢谢~</p>
     <template #footer>
