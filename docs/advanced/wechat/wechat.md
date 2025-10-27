@@ -6,7 +6,7 @@
 
 ## 免费 QQ 群
 
-①②③④⑤ 群已满，下面是 ⑥ 群。
+①②③④⑤⑥ 群已满，下面是 ⑦ 群。
 
 <FreshImage src="https://oss.laf.run/ukw0y1-site/unibest-discussion-group/qq.jpg" alt="QQ群二维码" />
 
