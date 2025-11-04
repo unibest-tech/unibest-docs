@@ -152,6 +152,15 @@ onLoad(() => {
 
 ![alt text](5-1.png)
 
+### 7.加载本地 svg 文件为图标
+
+如果有个别图标无法在 `iconify` 图标库中找到，你可以让 UI 同学设计一个或从 `iconfont` 上下载（要求最终产物是 svg 文件），放置到 `src/static/my-icons/` 目录下。
+
+```html
+<!-- 如 src/static/my-icons/copyright.svg 文件对应的使用方法 -->
+<view class="i-my-icons-copyright" />
+```
+
 ## iconfont 图标库
 
 `iconfont` 同样有海量免费的图标，同时支持上传自己的图标。公司项目通常会有自己的图标，由专业的 `UI设计师` 设计，这时通常会使用 `iconfont` 方式使用图标。
