@@ -8,7 +8,7 @@
 
 ①②③④⑤⑥ 群已满，下面是 ⑦ 群。
 
-<FreshImage src="https://oss.laf.run/ukw0y1-site/unibest-discussion-group/qq.jpg" alt="QQ群二维码" />
+<FreshImage src="https://oss.laf.run/ukw0y1-site/unibest-discussion-group/qq.jpg" height="auto" width="300" alt="QQ群二维码" />
 
 > QQ 群永久有效，微信群 7 天就过期。QQ 群无需每 7 天替换一次。
 
@@ -18,7 +18,13 @@
 
 如果确实有需要的，进群后发 `专属红包 20元` 给群主 `菲鸽` 即可。(注意：没发的会被移出群聊。)
 
-<FreshImage src="https://oss.laf.run/ukw0y1-site/unibest-discussion-group/wechat-vip.jpg" alt="微信群VIP" />
+<FreshImage src="https://oss.laf.run/ukw0y1-site/unibest-discussion-group/wechat-vip.jpg" height="300" width="auto" alt="微信群VIP" />
+
+> 专属红包这样发：
+
+<div style="display: flex; justify-content: center; height: 400px;">
+<FreshImage src="https://oss.laf.run/ukw0y1-site/unibest-discussion-group/red-pocket.jpg" height="auto" width="auto" alt="专属红包" />
+</div>
 
 ## 联系我
 
