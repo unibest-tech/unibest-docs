@@ -1,5 +1,5 @@
 <template>
-  <img :src="freshUrl" :alt="alt" width="300" />
+  <img :src="freshUrl" :alt="alt" :height="height" :width="width" style="display: inline-block" />
 </template>
 
 <script setup>
@@ -12,6 +12,14 @@ const props = defineProps({
   alt: {
     type: String,
     default: '',
+  },
+  width: {
+    type: Number,
+    default: 300,
+  },
+  height: {
+    type: Number,
+    default: 400,
   },
 });
 
