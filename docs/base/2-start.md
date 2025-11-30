@@ -9,28 +9,74 @@
 
 ## 创建项目
 
-通过下面的命令可以快速生成项目模板，`pnpm create unibest <项目名称>` ，如果不写 `<项目名称>` 会进入命令行交互模式。
+> 2025-11-04 开发了新版的 `create-unibest@v3`，对生成的项目进行了精简，并且对配置型进行了优化。可以自行选择想要的平台和 UI 库等。
+>
+> 如果想用旧版的 `create-unibest@v2`，则可以添加 `@v2` 后缀，例如 `pnpm create unibest@v2 <项目名称>`。
 
-```bash
-# 如果没有 pnpm，请先安装: npm i -g pnpm
-pnpm create unibest
-# 时不时加一下 @latest 标识，这样可以使用最新版本的 create-unibest
-pnpm create unibest@latest
+新版 `create-unibest@v3` 通过下面的命令可以快速生成项目模板:
+
+`pnpm create unibest new <项目名称>`
+
+> 如果执行 `pnpm create unibest`， 则会打印帮助信息，等同 `pnpm create unibest -h`。
+
+实际操作如下：
+
+- 有 `new` 关键字，则进入创建项目流程。
+
+```text
+feige996 ~ % pnpm create unibest new
+┌  create-unibest@v3.1.0 快速创建 unibest@v4.1.0 项目
+│
+◇  请输入项目名称[项目名称只能包含字母、数字、下划线和短横线，千万别写中文]
+│  uni-demo
+│
+◆ 请选择需要支持的平台（多选）[脚手架将根据所选平台生成对应的平台代码，请根据实际情况选择]
+│  ◼ H5
+│  ◻ 微信小程序
+│  ◻ APP
+│  ◻ 支付宝小程序（包含钉钉）
+│  ◻ 抖音小程序
+│
+◆  请选择UI库
+│  ● 无UI库
+│  ○ wot-ui
+│  ○ uview-pro
+│  ○ sard-uniapp
+│  ○ uv-ui
+│  ○ uview-plus
+◆  是否需要登录策略（黑白名单、登录拦截等）？[暂不知道的，选No即可，项目生成后也可以加该策略]
+│  ○ Yes / ● No
+◆  是否需要多语言i18n？
+│  ○ Yes / ● No
+◆  项目uni-demo创建成功！
 ```
 
-实际操作截图如下：
+- 没有 `new` 关键字，则打印帮助信息。
 
-<!-- `create-unibest` 在 `v1.10.0` 开始会有版本号，如下：
+```txt
+feige996 ~ % pnpm create unibest
+ WARN  1 deprecated subdependencies found: node-domexception@1.0.0
+.../19ad2678dfe-1611                     |  +25 +++
+.../19ad2678dfe-1611                     | Progress: resolved 25, reused 25, downloaded 0, added 25, done
 
-![alt text](./assets/2-2.png)
+create-unibest - 跨平台开发框架脚手架
 
-`2025-06-21` 发布 `v2.0.0` 精简了很多模板，`base`、`tabbar`、`spa` 合并成了新的 `base` 模板（新的 `base` 模板可以在代码层面得到所有的四种 `tabbar` 形式），同时去掉了 `hbx-base`、`hbx-demo`。
+全局安装:
+  npm i -g create-unibest                    全局安装，得到 best 命令
+  npm update -g create-unibest               更新 create-unibest 包
 
-最新的模板支持如下： -->
+  best <command> [options]
+  best new my-project                        创建新的unibest项目
+  best -v                                    查看版本信息
+  best -h                                    查看帮助信息
 
-![alt text](image-1.png)
 
-新的 `base` 模板如何切换不同的 tabbar, 见 [tabbar 专题](./2-tabbar.md)
+临时使用:
+  pnpm create unibest <command> [options]
+  pnpm create unibest new my-project         创建新的unibest项目
+  pnpm create unibest -v                     查看版本信息
+  pnpm create unibest -h                     查看帮助信息
+```
 
 ## 安装、运行
 
@@ -84,37 +130,3 @@ git commit -m "feat: init project"
 - https://gitee.com/feige996/hello-unibest
 
 > 未来 `github` 上的仓库都可能迁移到 `unibest-tech` 组织下。
-
-## 旧的模板生成相关内容
-
-::: details 下面的在 2025-06-21 发布 v2.0.0 之后过期了
-
-![unibest templates](https://oss.laf.run/ukw0y1-site/xmind/unibest模板.png)
-
-`create unibest` 支持 `-t` 参数选择模板，目前已有两大类 `8` 个模板
-
-- `普通` 模板( `4个` ）：分别是 `base`、`tabbar`、`spa`、 `i18n`、`demo`。
-- `hbx` 模板(`2个` ）：分别是 `hbx-base`、`hbx-demo`。
-
-不带 `-t` 参数时会默认生成 `base` 模板。
-
-`base` 模板是最基本的模板，更新最及时，推荐使用 `base` 模板创建新项目。其他几个模板也是基于 `base` 模板得到的。 `demo` 模板则作为参考用。
-
-`base` 模板的改动会自动同步到其他几个分支，通过 `github actions` 实现。
-
-```sh
-# VS Code 模板
-pnpm create unibest # 默认用 base 模板
-
-pnpm create unibest -t base # 基础模板
-pnpm create unibest -t tabbar # 自定义 tabbar 模板
-pnpm create unibest -t spa # 单页应用 模板（使用一个组件模拟tabbar）
-pnpm create unibest -t i18n # 多语言模板
-pnpm create unibest -t demo # 所有demo的模板(包括i18n)
-```
-
-> 2024-12-29<周日> 发表了一篇文章：[【unibest】可以去掉 hbx 模版了，base 模板一统天下](https://mp.weixin.qq.com/s/ybunFNkjKfV5yVLOMvqscg?token=1696234630&lang=zh_CN)
->
-> 就是说 hbx 模板可以退出历史舞台了。
-
-:::
