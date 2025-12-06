@@ -2,8 +2,6 @@
 
 ## 引言
 
-> 2025-08-28 更新， `route-block` 在 `v3.12.0` 已被 `definePage` 替代，一下内容已过时，仅供参考
-
 有群友第一次看到 `unibest` 里面 `vue` 文件 `route-block` 这种写法，表示很奇怪，从来没见过！
 
 ```vue
@@ -21,7 +19,7 @@
 </template>
 ```
 
-大改版，最新版使用 `definePage` 替代 `route-block`，
+> 2025-08-28 更新， `route-block` 在 `v3.12.0` 已被 `definePage` 替代.
 
 - 对象形式（静态配置）：
 
@@ -191,6 +189,14 @@ UniPages({
 得益于 [@uni-helper/vite-plugin-uni-manifest](https://github.com/uni-helper/vite-plugin-uni-manifest)，你可以使用 `TypeScript` 来编写 `manifest.json`。
 
 > `manifest.json` 文件是自动生成的，请不要手动修改，需要配置的内容请在 `manifest.config.ts` 里面配置。
+
+## App.ku.vue 全局挂载组件
+
+在 `src/App.ku.vue` 里面可以全局挂载组件，这样在所有页面都可以使用这个组件。
+
+文档地址：[uni-ku/root](https://github.com/uni-ku/root)
+
+目的：解决 `uniapp` 无法使用根部组件问题
 
 ## 总结
 
