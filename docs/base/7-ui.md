@@ -66,7 +66,7 @@ pnpm add uview-pro
 
 - 2. 引入 uView Pro 主库
 
-在项目`src` 目录中的 `main.ts` 中，引入并使用  `uView Pro` 的工具库。
+在项目`src` 目录中的 `main.ts` 中，引入并使用 `uView Pro` 的工具库。
 
 ```diff
 import { createSSRApp } from "vue";
@@ -238,6 +238,14 @@ easycom: {
   "./components.d.ts",
   "./global.d.ts"
 ]
+```
+
+- 4. `App.vue` 中首行的位置引入 `sard-uniapp` 的基础样式
+
+```scss
+<style lang="scss">
+@import 'sard-uniapp/index.scss';
+</style>
 ```
 
 > 其他 UI 库的安装类似，不再赘述。
