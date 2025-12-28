@@ -10,7 +10,9 @@ import HomeFeaturesAfter from './components/HomeFeaturesAfter.vue';
 import Showcase2 from './components/showcase/Showcase2.vue';
 import FreshImage from './components/FreshImage.vue';
 import ElementPlus from 'element-plus';
+import AsideSponsors from './components/AsideSponsors.vue';
 import 'element-plus/dist/index.css';
+import 'element-plus/theme-chalk/dark/css-vars.css';
 
 export default {
   extends: DefaultTheme,
@@ -21,6 +23,7 @@ export default {
       // 'home-hero-info-after': () => h(HomeStar),
       'nav-bar-title-after': () => h(NavBarTitleAfter),
       'home-features-after': () => h(HomeFeaturesAfter),
+      'aside-outline-after': () => h(AsideSponsors),
     });
   },
   enhanceApp({ app, router, siteData }) {
