@@ -141,13 +141,6 @@ export default defineConfig({
         text: '相关链接',
         link: '/other/links/links',
       },
-      {
-        text: 'unibest备用地址',
-        items: [
-          { text: 'unibest.tech(本站)', link: 'https://unibest.tech' },
-          { text: 'github page(备用)', link: 'https://feige996.github.io/unibest/' },
-        ],
-      },
     ],
     sidebar: [
       {
