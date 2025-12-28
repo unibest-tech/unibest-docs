@@ -11,7 +11,7 @@
 ## 500 元
 
 - CCFLY：用 Claude Code 开发？推荐 CCFly (https://ccfly.codes/) - 稳定、快速、支持全系列模型，新用户 0.01 元体验
-  > 我的邀请链接：<https://ccfly.codes/?inviteCode=KVB090KC>
+  > 菲鸽的邀请链接：<https://ccfly.codes/?inviteCode=KVB090KC> on 2025-12-28
 
 ## 200 元
 
