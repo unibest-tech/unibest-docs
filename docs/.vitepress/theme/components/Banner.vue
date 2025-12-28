@@ -1,5 +1,6 @@
 <script setup lang="ts">
-import { ref, watch, computed, onMounted } from 'vue';
+import { ref, watch } from 'vue';
+// 参考 wot-ui 的 banner 组件
 
 const open = ref(false); // 默认不显示，避免闪烁
 const BANNER_STORAGE_KEY = 'wot-banner-dismissed-time';
