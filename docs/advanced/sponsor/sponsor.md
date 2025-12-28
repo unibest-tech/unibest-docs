@@ -8,6 +8,11 @@
 
 > 金牌赞助者将额外获得首页产品展示位。
 
+## 500 元
+
+- CCFLY：用 Claude Code 开发？推荐 CCFly (https://ccfly.codes/) - 稳定、快速、支持全系列模型，新用户 0.01 元体验
+  > 我的邀请链接：<https://ccfly.codes/?inviteCode=KVB090KC>
+
 ## 200 元
 
 - 麦可
