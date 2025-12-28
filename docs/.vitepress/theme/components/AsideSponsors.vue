@@ -98,7 +98,6 @@ const isGoldSponsorsOdd = computed(() => {
                 />
                 <div v-else class="vp-sponsor-grid-text">
                   <h4>{{ sponsor.name }}</h4>
-                  <p>{{ sponsor.desc }}</p>
                 </div>
               </article>
             </a>
@@ -133,18 +132,18 @@ const isGoldSponsorsOdd = computed(() => {
             </a>
           </div>
           <!-- 当金牌赞助为奇数时，默认赞助位填补到金牌赞助位置 -->
-          <div class="vp-sponsor-grid-item" v-if="isGoldSponsorsOdd">
+          <!-- <div class="vp-sponsor-grid-item" v-if="isGoldSponsorsOdd">
             <a class="vp-sponsor-grid-link" href="/reward/sponsor" rel="sponsored noopener">
               <article class="vp-sponsor-grid-box">
                 <span class="vp-sponsor-grid-text">成为赞助商</span>
               </article>
             </a>
-          </div>
+          </div> -->
         </div>
       </section>
 
       <!-- 当金牌赞助为偶数或没有金牌赞助时，默认赞助位占据一整行 -->
-      <section class="vp-sponsor-section" v-if="!isGoldSponsorsOdd || !goldSponsors?.items.length">
+      <!-- <section class="vp-sponsor-section" v-if="!isGoldSponsorsOdd || !goldSponsors?.items.length">
         <div class="VPSponsorsGrid vp-sponsor-grid xmini" data-vp-grid="1">
           <div class="vp-sponsor-grid-item">
             <a class="vp-sponsor-grid-link" href="/reward/sponsor" rel="sponsored noopener">
@@ -154,7 +153,7 @@ const isGoldSponsorsOdd = computed(() => {
             </a>
           </div>
         </div>
-      </section>
+      </section> -->
     </div>
   </div>
 </template>
