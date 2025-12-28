@@ -228,8 +228,7 @@ button:hover .close {
 
 .vt-primary-action {
   display: inline-block;
-  background: radial-gradient(140.35% 140.35% at 175% 94.74%, #2bfdd2, #bd34fe00),
-    radial-gradient(89.94% 89.94% at 18.42% 15.79%, #4d80f0, #41d1ff00);
+  background: var(--vp-c-brand-1);
   color: #fff;
   padding: 6px 12px;
   border-radius: 6px;
@@ -238,11 +237,6 @@ button:hover .close {
   text-decoration: none;
   transition: all 0.2s ease-in-out;
   white-space: nowrap;
-}
-
-.vt-primary-action:hover {
-  transform: translateY(-1px);
-  box-shadow: 0 4px 12px rgba(77, 128, 240, 0.4);
 }
 
 .vt-primary-action:active {
