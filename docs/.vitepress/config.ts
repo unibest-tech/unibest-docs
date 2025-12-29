@@ -2,7 +2,6 @@ import dayjs from 'dayjs';
 import { defineConfig } from 'vitepress';
 import viteCompression from 'vite-plugin-compression';
 import llmsPlugin from 'vitepress-plugin-llms';
-import packageJson from '../../package.json';
 
 const buildTime = dayjs().format('YYYY-MM-DD HH:mm:ss');
 
@@ -36,7 +35,6 @@ export default defineConfig({
     ['link', { rel: 'icon', href: `${base}favicon.ico` }],
     // 增加构建信息
     ['meta', { name: 'build-time', content: buildTime }],
-    ['meta', { name: 'version', content: packageJson.version }],
     [
       'meta',
       {
@@ -51,63 +49,11 @@ export default defineConfig({
         content: '菲鸽, 菲哥, 鸽鸽, feige996, feige996, 1020103647@qq.com',
       },
     ],
-    [
-      'meta',
-      {
-        name: 'twitter:title',
-        content: '最好用的 uniapp 开发模板',
-      },
-    ],
     // 添加 ICP 备案信息
     ['meta', { name: 'icp', content: '粤ICP备2024160998号' }],
     ['link', { rel: 'license', href: 'https://beian.miit.gov.cn/' }],
     // 百度联盟meta
     ['meta', { property: 'baidu_union_verify', content: '8ab9e6068e7febf94e684886f81f406f' }],
-    // 其他杂七杂八的 meta 标签
-    ['meta', { name: 'twitter:card', content: 'summary_large_image' }],
-    ['meta', { name: 'twitter:site', content: 'feige996' }],
-    [
-      'meta',
-      {
-        name: 'twitter:image:src',
-        content:
-          'https://opengraph.githubassets.com/1cac1150838995e1f7d1643c00eee51a5d884f2054f995c9d3225b07b0eddb39/feige996/unibest',
-      },
-    ],
-    [
-      'meta',
-      {
-        property: 'og:image',
-        content:
-          'https://opengraph.githubassets.com/1cac1150838995e1f7d1643c00eee51a5d884f2054f995c9d3225b07b0eddb39/feige996/unibest',
-      },
-    ],
-    [
-      'meta',
-      {
-        property: 'og:image:alt',
-        content: '最好用的 uniapp 开发模板',
-      },
-    ],
-    ['meta', { property: 'og:image:width', content: '1200' }],
-    ['meta', { property: 'og:image:height', content: '600' }],
-    ['meta', { property: 'og:site_name', content: 'GitHub' }],
-    ['meta', { property: 'og:type', content: 'object' }],
-    [
-      'meta',
-      {
-        property: 'og:title',
-        content: '最好用的 uniapp 开发模板',
-      },
-    ],
-    ['meta', { property: 'og:url', content: 'https://github.com/feige996/unibest' }],
-    [
-      'meta',
-      {
-        property: 'og:description',
-        content: '最好用的 uniapp 开发模板',
-      },
-    ],
     // 下面是百度统计代码
     ['script', { async: '', src: 'https://hm.baidu.com/hm.js?081c2ec121383d9e7d5a35c5833ab6ff' }],
     // 下面是不蒜子统计代码
@@ -123,6 +69,9 @@ export default defineConfig({
     // https://vitepress.dev/reference/default-theme-config
     logo: '/logo.svg',
     siteTitle: 'unibest',
+    lastUpdated: {
+      text: '最后更新',
+    },
     nav: [
       {
         text: '快速开始',
@@ -228,7 +177,7 @@ export default defineConfig({
     ],
     footer: {
       message: 'Released under the MIT License.',
-      copyright: 'Copyright (c) 2024 菲鸽',
+      copyright: 'Copyright (c) 2026 菲鸽',
     },
     socialLinks: [
       { icon: 'github', link: 'https://github.com/feige996/unibest' },
