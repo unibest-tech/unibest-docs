@@ -48,7 +48,7 @@ const data = ref([
     items: [
       {
         name: 'ccfly',
-        img: 'https://registration-bucket.oss-cn-shanghai.aliyuncs.com/tickets/attachments/20251129/f2feca2b3c684d96b533338a68566cad_logo.png',
+        img: 'https://registration-bucket.oss-cn-shanghai.aliyuncs.com/tickets/attachments/20251229/13dbe74dbd904ee492e9065fe79c1f84_CCFLY2-04.png',
         url: 'https://ccfly.codes/?inviteCode=KVB090KC',
       },
     ],
@@ -169,7 +169,7 @@ const isGoldSponsorsOdd = computed(() => {
 }
 
 .vp-sponsor-grid-image {
-  max-width: 120px;
+  max-width: 200px !important;
   max-height: 72px !important;
   filter: none !important;
 }
