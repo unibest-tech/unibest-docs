@@ -69,6 +69,9 @@ export default defineConfig({
     // https://vitepress.dev/reference/default-theme-config
     logo: '/logo.svg',
     siteTitle: 'unibest',
+    lastUpdated: {
+      text: '最后更新',
+    },
     nav: [
       {
         text: '快速开始',
