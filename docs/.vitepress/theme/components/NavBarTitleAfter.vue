@@ -2,7 +2,7 @@
 // 直接使用Vite注入的构建时变量
 import { ref, onMounted } from 'vue';
 
-const version = ref<string>('2.13.1'); // 默认版本号
+const version = ref<string>('4.1.1'); // 默认版本号
 const repoOwner = 'unibest-tech';
 const repoName = 'unibest';
 const branch = 'main'; // 假设使用main分支
