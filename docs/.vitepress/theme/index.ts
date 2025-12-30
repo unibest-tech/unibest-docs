@@ -21,7 +21,7 @@ export default {
     // https://vitepress.dev/guide/extending-default-theme#layout-slots
     return h(DefaultTheme.Layout, null, {
       'layout-top': () => h(Banner),
-      'home-hero-info-after': () => h(HomeStar),
+      // 'home-hero-info-after': () => h(HomeStar), // github star
       'home-features-after': () => h(HomeFriendly), // 友情链接
       'nav-bar-title-after': () => h(NavBarTitleAfter), // 版本号
       'aside-outline-after': () => h(AsideSponsors), // 广告位
