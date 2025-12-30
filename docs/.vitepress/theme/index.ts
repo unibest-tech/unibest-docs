@@ -11,7 +11,8 @@ import HomeStar from './components/HomeStar.vue';
 import Showcase2 from './components/showcase/Showcase2.vue';
 import FreshImage from './components/FreshImage.vue';
 import ElementPlus from 'element-plus';
-import AsideSponsors from './components/AsideSponsors.vue';
+import SpecialSponsor from './components/sponsor/SpecialSponsor.vue';
+import AsideSponsors from './components/sponsor/AsideSponsors.vue';
 import 'element-plus/dist/index.css';
 import 'element-plus/theme-chalk/dark/css-vars.css';
 
@@ -21,6 +22,7 @@ export default {
     // https://vitepress.dev/guide/extending-default-theme#layout-slots
     return h(DefaultTheme.Layout, null, {
       'layout-top': () => h(Banner),
+      'home-hero-after': () => h(SpecialSponsor),
       // 'home-hero-info-after': () => h(HomeStar), // github star
       'home-features-after': () => h(HomeFriendly), // 友情链接
       'nav-bar-title-after': () => h(NavBarTitleAfter), // 版本号

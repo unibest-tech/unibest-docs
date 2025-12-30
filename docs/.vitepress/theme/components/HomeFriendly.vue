@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { computed, ref } from 'vue';
+import SpecialSponsor from './sponsor/SpecialSponsor.vue';
 import VPFeature from 'vitepress/dist/client/theme-default/components/VPFeature.vue';
 
 const data = ref({
@@ -48,6 +49,7 @@ const grid = computed(() => {
 </script>
 
 <template>
+  <SpecialSponsor />
   <div v-if="links && links.length" class="VPFeatures">
     <div class="container">
       <h1 class="friendly-title">友情链接</h1>
@@ -104,8 +106,8 @@ const grid = computed(() => {
 
 .friendly-title {
   text-align: center;
-  margin-bottom: 50px;
-  margin-top: 50px;
+  margin-bottom: 36px;
+  margin-top: 24px;
   font-size: 24px;
 }
 
