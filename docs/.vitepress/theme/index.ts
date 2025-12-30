@@ -24,7 +24,7 @@ export default {
       // 'home-hero-info-after': () => h(HomeStar), // github star
       'home-features-after': () => h(HomeFriendly), // 友情链接
       'nav-bar-title-after': () => h(NavBarTitleAfter), // 版本号
-      'aside-outline-after': () => h(AsideSponsors), // 广告位
+      'aside-outline-after': () => h(AsideSponsors), // 侧边栏广告位
     });
   },
   enhanceApp({ app, router, siteData }) {
