@@ -48,7 +48,7 @@ const data = ref([
     items: [
       {
         name: 'ccfly',
-        img: 'https://registration-bucket.oss-cn-shanghai.aliyuncs.com/tickets/attachments/20251229/13dbe74dbd904ee492e9065fe79c1f84_CCFLY2-04.png',
+        img: 'https://registration-bucket.oss-cn-shanghai.aliyuncs.com/tickets/attachments/20251230/fb86e570e47b415ebee7cccd0378b009_图层 2.png',
         url: 'https://ccfly.codes/?inviteCode=KVB090KC',
       },
     ],
@@ -172,6 +172,7 @@ const isGoldSponsorsOdd = computed(() => {
   max-width: 200px !important;
   max-height: 72px !important;
   filter: none !important;
+  padding: 8px; /** 临时给CCFly设置的，后续可以考虑是否去掉 */
 }
 
 a.sponsors-aside-text {
