@@ -6,7 +6,7 @@ import './custom.css';
 
 import Banner from './components/Banner.vue';
 import NavBarTitleAfter from './components/NavBarTitleAfter.vue';
-import HomeFeaturesAfter from './components/HomeFeaturesAfter.vue';
+import HomeFriendly from './components/HomeFriendly.vue';
 import HomeStar from './components/HomeStar.vue';
 import Showcase2 from './components/showcase/Showcase2.vue';
 import FreshImage from './components/FreshImage.vue';
@@ -18,13 +18,13 @@ import 'element-plus/theme-chalk/dark/css-vars.css';
 export default {
   extends: DefaultTheme,
   Layout: () => {
+    // https://vitepress.dev/guide/extending-default-theme#layout-slots
     return h(DefaultTheme.Layout, null, {
       'layout-top': () => h(Banner),
-      // https://vitepress.dev/guide/extending-default-theme#layout-slots
       'home-hero-info-after': () => h(HomeStar),
-      'nav-bar-title-after': () => h(NavBarTitleAfter),
-      'home-features-after': () => h(HomeFeaturesAfter),
-      'aside-outline-after': () => h(AsideSponsors),
+      'home-features-after': () => h(HomeFriendly), // 友情链接
+      'nav-bar-title-after': () => h(NavBarTitleAfter), // 版本号
+      'aside-outline-after': () => h(AsideSponsors), // 广告位
     });
   },
   enhanceApp({ app, router, siteData }) {
