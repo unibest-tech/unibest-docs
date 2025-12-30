@@ -5,7 +5,7 @@ layout: home
 hero:
   name: 'unibest'
   text: '最好的 uniapp 框架'
-  tagline: '开箱即用，提供舒适开发体验'
+  tagline: '开箱即用，提供舒适开发体验，每天生成项目超过100+'
   image:
     src: /logo.svg
     alt: unibest
