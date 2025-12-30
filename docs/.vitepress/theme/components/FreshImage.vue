@@ -23,6 +23,7 @@ const props = defineProps({
   },
 });
 
+// 保证图片链接每次都不同，避免缓存问题
 const freshUrl = computed(() => {
   return `${props.src}?t=${Date.now()}`;
 });
