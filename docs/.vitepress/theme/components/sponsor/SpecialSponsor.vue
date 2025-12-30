@@ -13,11 +13,11 @@ const data = ref({
   tier: 'Platinum',
   size: 'large',
   items: [
-    {
-      name: '赞助商名称',
-      img: 'https://unibest.tech/logo.svg',
-      url: 'https://unibest.tech',
-    },
+    // {
+    //   name: '赞助商名称',
+    //   img: 'https://unibest.tech/logo.svg',
+    //   url: 'https://unibest.tech',
+    // },
     // {
     //   name: 'wot-ui',
     //   img: 'https://sponsor.wot-ui.cn/assets/sponsor/wot-ui.png',
