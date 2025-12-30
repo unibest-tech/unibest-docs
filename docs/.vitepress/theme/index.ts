@@ -22,7 +22,7 @@ export default {
     // https://vitepress.dev/guide/extending-default-theme#layout-slots
     return h(DefaultTheme.Layout, null, {
       'layout-top': () => h(Banner),
-      'home-hero-after': () => h(SpecialSponsor),
+      'home-hero-after': () => h(SpecialSponsor, { title: '砖石赞助商' }),
       // 'home-hero-info-after': () => h(HomeStar), // github star
       'home-features-after': () => h(HomeFriendly), // 友情链接
       'nav-bar-title-after': () => h(NavBarTitleAfter), // 版本号

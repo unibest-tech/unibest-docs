@@ -49,7 +49,7 @@ const grid = computed(() => {
 </script>
 
 <template>
-  <SpecialSponsor />
+  <SpecialSponsor title="铂金赞助商" />
   <div v-if="links && links.length" class="VPFeatures">
     <div class="container">
       <h1 class="friendly-title">友情链接</h1>
@@ -66,6 +66,7 @@ const grid = computed(() => {
       </div>
     </div>
   </div>
+  <SpecialSponsor title="黄金赞助商" />
 </template>
 
 <style scoped>
