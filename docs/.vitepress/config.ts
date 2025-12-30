@@ -77,7 +77,7 @@ export default defineConfig({
     sidebar: sidebar,
     footer: {
       message: 'Released under the MIT License.',
-      copyright: 'Copyright (c) 2026 菲鸽',
+      copyright: `Copyright (c) ${new Date().getFullYear()} 菲鸽`,
     },
     socialLinks: [
       { icon: 'github', link: 'https://github.com/feige996/unibest' },
