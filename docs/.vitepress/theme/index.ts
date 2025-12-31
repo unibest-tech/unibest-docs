@@ -26,9 +26,13 @@ export default {
       'home-hero-after': () => h(SpecialSponsor, { title: '砖石赞助商' }),
       // 'home-hero-info-after': () => h(HomeStar), // github star
       'sidebar-nav-before': () => h(SidebarSponsor),
+      'sidebar-nav-after': () => h(SidebarSponsor),
       'home-features-after': () => h(HomeFriendly), // 友情链接
       'nav-bar-title-after': () => h(NavBarTitleAfter), // 版本号
-      'aside-outline-after': () => h(AsideSponsors), // 侧边栏广告位
+      // 'aside-outline-after': () => h(AsideSponsors), // 侧边栏广告位
+      'aside-ads-before': () => h(AsideSponsors), // 侧边栏广告位
+      'aside-ads-after': () => h(AsideSponsors), // 侧边栏广告位
+      'aside-bottom': () => h(AsideSponsors), // 侧边栏广告位
     });
   },
   enhanceApp({ app, router, siteData }) {
