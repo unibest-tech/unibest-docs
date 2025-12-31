@@ -48,32 +48,16 @@ feige996 ~ % pnpm create unibest
 ◆  项目uni-demo创建成功！
 ```
 
-> 如果想查看帮助信息， 则可以执行 `pnpm create unibest -h`。
+## 生成流程
 
-```txt
-feige996 ~ % pnpm create unibest -h
- WARN  1 deprecated subdependencies found: node-domexception@1.0.0
-.../19ad2678dfe-1611                     |  +25 +++
-.../19ad2678dfe-1611                     | Progress: resolved 25, reused 25, downloaded 0, added 25, done
+根据 `登录策略` 和 `i18n` 是否选择，会使用 4 个分支代码生成基础代码
 
-create-unibest - 跨平台开发框架脚手架
+- 当没有选`登录策略`，也没有选 `i18n`，则会使用 `base` 分支代码。
+- 当选了`登录策略`，也没有选 `i18n`，则会使用 `base-login` 分支代码。
+- 当没有选`登录策略`，选了 `i18n`，则会使用 `base-i18n` 分支代码。
+- 当选了`登录策略`，选了 `i18n`，则会使用 `base-login-i18n` 分支代码。
 
-全局安装:
-  npm i -g create-unibest                    全局安装，得到 best 命令
-  npm update -g create-unibest               更新 create-unibest 包
-
-  best <command> [options]
-  best my-project                            创建新的unibest项目
-  best -v                                    查看版本信息
-  best -h                                    查看帮助信息
-
-
-临时使用:
-  pnpm create unibest <command> [options]
-  pnpm create unibest my-project             创建新的unibest项目
-  pnpm create unibest -v                     查看版本信息
-  pnpm create unibest -h                     查看帮助信息
-```
+接下来会根据所选的平台和 UI 库，生成对应的代码（动态插入）。
 
 ## 安装、运行
 
