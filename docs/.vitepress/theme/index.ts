@@ -30,8 +30,8 @@ export default {
       'home-features-after': () => h(HomeFriendly), // 友情链接
       'nav-bar-title-after': () => h(NavBarTitleAfter), // 版本号
       // 'aside-outline-after': () => h(AsideSponsors), // 侧边栏广告位
-      'aside-ads-before': () => h(AsideSponsors), // 侧边栏广告位
-      'aside-ads-after': () => h(AsideSponsors), // 侧边栏广告位
+      // 'aside-ads-before': () => h(AsideSponsors), // 侧边栏广告位
+      // 'aside-ads-after': () => h(AsideSponsors), // 侧边栏广告位
       'aside-bottom': () => h(AsideSponsors), // 侧边栏广告位
     });
   },
