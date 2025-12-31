@@ -10,13 +10,15 @@
 
 ## 创建项目
 
-> `2025-11-04` 开发了新版的 `create-unibest@v3`，对生成的项目进行了精简，并且对配置型进行了优化。可以自行选择想要的平台和 UI 库等。
->
-> 如果想用旧版的 `create-unibest@v2`，则可以 `pnpm create unibest@v2`。
+`2025-11-04` 开发了新版的 `create-unibest`，对生成的项目进行了精简，并且对配置型进行了优化。可以自行选择想要的平台和 UI 库等。
 
-新版 `create-unibest@v3` 通过下面的命令可以快速生成项目模板:
+> 如果想用 `v2` 版的，则可以 `pnpm create unibest@v2`。
+
+通过下面的命令可以快速生成项目模板:
 
 `pnpm create unibest`
+
+> `空格` 选择/取消选择，`A` 全选/取消全选，`Enter` 确认选择，上下键切换当前选项。
 
 ```text
 feige996 ~ % pnpm create unibest
