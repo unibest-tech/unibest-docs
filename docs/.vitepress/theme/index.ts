@@ -13,6 +13,7 @@ import FreshImage from './components/FreshImage.vue';
 import ElementPlus from 'element-plus';
 import SpecialSponsor from './components/sponsor/SpecialSponsor.vue';
 import AsideSponsors from './components/sponsor/AsideSponsors.vue';
+import SidebarSponsor from './components/sponsor/SidebarSponsor.vue';
 import 'element-plus/dist/index.css';
 import 'element-plus/theme-chalk/dark/css-vars.css';
 
@@ -24,6 +25,7 @@ export default {
       'layout-top': () => h(Banner),
       'home-hero-after': () => h(SpecialSponsor, { title: '砖石赞助商' }),
       // 'home-hero-info-after': () => h(HomeStar), // github star
+      'sidebar-nav-before': () => h(SidebarSponsor),
       'home-features-after': () => h(HomeFriendly), // 友情链接
       'nav-bar-title-after': () => h(NavBarTitleAfter), // 版本号
       'aside-outline-after': () => h(AsideSponsors), // 侧边栏广告位
