@@ -55,6 +55,7 @@ npx degit dcloudio/uni-preset-vue#vite-ts my-vue3-project
   - vite-plugin-uni-layouts
   - vite-plugin-uni-manifest
   - vite-plugin-uni-platform
+- ku/root 插件
 - UI 库（默认 `wot-ui`，支持替换其他 `UI库`)
 - pinia + pinia-plugin-persistedstate
 - 通用功能
@@ -92,100 +93,154 @@ npx degit dcloudio/uni-preset-vue#vite-ts my-vue3-project
 
 ## 📦 目录结构
 
-通过 `tree -I node_modules -I dist -I .git -a > tree.md` 命令生成。
+通过 `tree -I node_modules -I dist -I .git -I .husky -I .trae -I .cursor -I .github -I .hbuilderx -a > tree.md` 命令生成。(update on 2025-12-31)
 
 ```txt
 .
+├── .commitlintrc.cjs
 ├── .editorconfig
-├── .eslintignore
-├── .eslintrc-auto-import.json
-├── .eslintrc.cjs
 ├── .gitignore
-├── .husky
 ├── .npmrc
-├── .prettierignore
-├── .prettierrc.cjs
-├── .stylelintignore
-├── .stylelintrc.cjs
 ├── .vscode
-├── LICENSE
-├── README.md
-├── commitlint.config.cjs
+│   ├── extensions.json
+│   ├── settings.json
+│   └── vue3.code-snippets
 ├── env
 │   ├── .env
 │   ├── .env.development
 │   ├── .env.production
 │   └── .env.test
+├── eslint.config.mjs
 ├── favicon.ico
 ├── index.html
+├── LICENSE
 ├── manifest.config.ts
+├── openapi-ts-request.config.ts
 ├── package.json
 ├── pages.config.ts
+├── pnpm-lock.yaml
+├── README.md
+├── scripts
+│   ├── create-base-files.js
+│   ├── open-dev-tools.js
+│   └── postupgrade.js
 ├── src
+│   ├── .DS_Store
+│   ├── api
+│   │   ├── foo-alova.ts
+│   │   ├── foo.ts
+│   │   ├── login.ts
+│   │   └── types
+│   │       └── login.ts
+│   ├── App.ku.vue
 │   ├── App.vue
 │   ├── components
 │   │   └── .gitkeep
 │   ├── env.d.ts
 │   ├── hooks
-│   │   ├── .gitkeep
 │   │   ├── useRequest.ts
+│   │   ├── useScroll.md
+│   │   ├── useScroll.ts
 │   │   └── useUpload.ts
-│   ├── interceptors
-│   │   ├── index.ts
-│   │   ├── prototype.ts
-│   │   ├── request.ts
-│   │   └── route.ts
+│   ├── http
+│   │   ├── alova.ts
+│   │   ├── http.ts
+│   │   ├── interceptor.ts
+│   │   ├── README.md
+│   │   ├── tools
+│   │   │   ├── enum.ts
+│   │   │   └── queryString.ts
+│   │   ├── types.ts
+│   │   └── vue-query.ts
 │   ├── layouts
-│   │   ├── default.vue
-│   │   └── demo.vue
+│   │   └── default.vue
 │   ├── main.ts
 │   ├── manifest.json
 │   ├── pages
-│   │   ├── about
-│   │   │   ├── about.vue
-│   │   │   └── components
-│   │   │   ├── request.vue
-│   │   │   └── upload.vue
-│   │   └── index
-│   │   └── index.vue
-│   ├── pages-sub
-│   │   └── demo
-│   │   └── index.vue
+│   │   ├── .DS_Store
+│   │   ├── index
+│   │   │   └── index.vue
+│   │   └── me
+│   │       └── me.vue
 │   ├── pages.json
+│   ├── router
+│   │   ├── interceptor.ts
+│   │   └── README.md
 │   ├── service
-│   │   └── index
-│   │   └── foo.ts
+│   │   ├── index.ts
+│   │   ├── info.ts
+│   │   ├── listAll.ts
+│   │   └── types.ts
 │   ├── static
+│   │   ├── app
+│   │   │   └── icons
+│   │   │       ├── 1024x1024.png
+│   │   │       ├── 120x120.png
+│   │   │       ├── 144x144.png
+│   │   │       ├── 152x152.png
+│   │   │       ├── 167x167.png
+│   │   │       ├── 180x180.png
+│   │   │       ├── 192x192.png
+│   │   │       ├── 20x20.png
+│   │   │       ├── 29x29.png
+│   │   │       ├── 40x40.png
+│   │   │       ├── 58x58.png
+│   │   │       ├── 60x60.png
+│   │   │       ├── 72x72.png
+│   │   │       ├── 76x76.png
+│   │   │       ├── 80x80.png
+│   │   │       ├── 87x87.png
+│   │   │       └── 96x96.png
 │   │   ├── images
-│   │   │   └── .gitkeep
+│   │   │   ├── avatar.jpg
+│   │   │   └── default-avatar.png
 │   │   ├── logo.svg
+│   │   ├── my-icons
+│   │   │   └── copyright.svg
 │   │   └── tabbar
-│   │   ├── example.png
-│   │   ├── exampleHL.png
-│   │   ├── home.png
-│   │   ├── homeHL.png
-│   │   ├── personal.png
-│   │   └── personalHL.png
+│   │       ├── example.png
+│   │       ├── exampleHL.png
+│   │       ├── home.png
+│   │       ├── homeHL.png
+│   │       ├── personal.png
+│   │       ├── personalHL.png
+│   │       └── scan.png
 │   ├── store
 │   │   ├── index.ts
+│   │   ├── token.ts
 │   │   └── user.ts
 │   ├── style
+│   │   ├── iconfont.css
 │   │   └── index.scss
+│   ├── tabbar
+│   │   ├── config.ts
+│   │   ├── index.vue
+│   │   ├── README.md
+│   │   ├── store.ts
+│   │   └── types.ts
 │   ├── types
+│   │   ├── async-component.d.ts
+│   │   ├── async-import.d.ts
 │   │   ├── auto-import.d.ts
-│   │   ├── global.d.ts
-│   │   ├── shims-uni.d.ts
+│   │   ├── components.d.ts
 │   │   └── uni-pages.d.ts
+│   ├── typings.d.ts
 │   ├── typings.ts
-│   ├── uni.scss
 │   ├── uni_modules
 │   │   └── .gitkeep
+│   ├── uni.scss
 │   └── utils
-│   ├── http.ts
-│   ├── index.ts
-│   └── platform.ts
+│       ├── debounce.ts
+│       ├── index.ts
+│       ├── systemInfo.ts
+│       ├── toLoginPage.ts
+│       ├── updateManager.wx.ts
+│       └── uploadFile.ts
 ├── tsconfig.json
-├── uni-pages.d.ts
 ├── uno.config.ts
+├── vite-plugins
+│   ├── copy-native-resources.ts
+│   ├── README.md
+│   └── sync-manifest-plugins.ts
 └── vite.config.ts
 ```
