@@ -6,7 +6,7 @@
   - **`Pnpm`** - `>=9` (我的是 `10.11.0`)
   - **`VSCode`** - 可选其他 `IDE` ：`Trae`、`Cursor` 、`WebStorm` 等
   - **`HBuilderX`** - `APP` 的运行和发布离不开它
-  - **`Git`** - 必须有 `git` ,否则 `husky` 会报错
+  - **`Git`** - 必须有 `git`，否则 `husky` 会报错
 
 ## 创建项目
 
