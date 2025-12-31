@@ -48,7 +48,7 @@ const platinumSponsor = computed(() => {
 <style scoped>
 .special-sponsor {
   /* border-top: 1px solid var(--vp-c-gray-soft); */
-  border-bottom: 1px solid var(--vp-c-gray-soft);
+  /* border-bottom: 1px solid var(--vp-c-gray-soft); */
   padding: 8px;
   display: flex;
   justify-content: center;
