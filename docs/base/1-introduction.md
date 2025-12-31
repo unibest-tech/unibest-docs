@@ -17,34 +17,17 @@
 
 `unibest` 内置了 `约定式路由`、`layout布局`、`请求封装`、`请求拦截`、`登录拦截`、`UnoCSS`、`i18n多语言` 等基础功能，提供了 `代码提示`、`自动格式化`、`统一配置`、`代码片段` 等辅助功能，让你编写 `uniapp` 拥有 `best` 体验 （ `unibest 的由来`）。
 
-> `unibest` 目前支持 `H5`、`小程序` 和 `App`。
-
-::: tip ⭐⭐⭐⭐⭐
-如果 `unibest` 对您有帮助，希望你可以去 **Github** 或者 **Gitee(码云)** 帮我点个 ⭐ ，这将是对我极大的鼓励。
-
-<!-- - github - feige996/unibest -->
-
-[![star](https://img.shields.io/github/stars/feige996/unibest?style=flat&logo=github)](https://github.com/feige996/unibest)
-
-<!-- - gitee - feige996/unibest -->
-
-[![star](https://gitee.com/feige996/unibest/badge/star.svg?theme=dark)](https://gitee.com/feige996/unibest)
-
-:::
-
-::: tip 🌟🌟🌟🌟🌟
-旧的文档地址 [codercup/unibest](https://codercup.github.io/unibest-docs/)不再维护，尽量使用新地址[unibest.tech](https://unibest.tech)。
-:::
+`unibest` 默认支持所有的 `uniapp` 平台（`H5`、`小程序` 和 `App`），但是具体支持情况还要看您所选的 `UI 库` 是否支持。
 
 ## ⭐ Star History
 
-同类模板对比实时地址：[https://www.star-history.com/#Ares-Chang/uni-vitesse&uni-helper/vitesse-uni-app&codercup/unibest&feige996/unibest&DaMaiCoding/uni-plus&Date](https://www.star-history.com/#Ares-Chang/uni-vitesse&uni-helper/vitesse-uni-app&codercup/unibest&feige996/unibest&DaMaiCoding/uni-plus&Date)
+同类模板对比实时地址：[https://www.star-history.com/#Ares-Chang/uni-vitesse&uni-helper/vitesse-uni-app&codercup/unibest&unibest-tech/unibest&DaMaiCoding/uni-plus&Date](https://www.star-history.com/#Ares-Chang/uni-vitesse&uni-helper/vitesse-uni-app&codercup/unibest&unibest-tech/unibest&DaMaiCoding/uni-plus&Date)
 
 如图所示，两个高高的都是 `unibest`，分别是新旧仓库。
 
-黄色的是旧的 `codercup`，秘钥丢失，进不去了。粉色的新的仓库（`feige996`），目前正在积极维护。
+黄色的是旧的 `codercup`，秘钥丢失，进不去了。粉色的新的仓库（`unibest-tech`），目前正在积极维护。
 
-[![Star History Chart](https://api.star-history.com/svg?repos=Ares-Chang/uni-vitesse,uni-helper/vitesse-uni-app,codercup/unibest,feige996/unibest,DaMaiCoding/uni-plus&type=Date)](https://www.star-history.com/#Ares-Chang/uni-vitesse&uni-helper/vitesse-uni-app&codercup/unibest&feige996/unibest&DaMaiCoding/uni-plus&Date)
+![Star History Chart](./star-history-20251231.png)
 
 ## 🗂 生成过程
 
