@@ -6,17 +6,15 @@
 
 ![alt text](2-tabbar-bilibili.png)
 
-## v3.0.0
+## 策略总览
 
 > 2025-06-21 开始，新的 `base` 模板同时支持旧的 `tabbar` 和 `spa` 模板，这里大致介绍一下使用。(`tabbar` 和 `spa` 模板已经不再需要了。)
 
-`tabbar` 分为 `3 种` 情况：0,1,2。
+`tabbar` 分为 `3 种` 情况：0,1,2。(`2025-12-31` 更新，去掉了几乎用不上的 `无缓存的自定义 tabbar`（3）)
 
 - 0: 'NO_TABBAR' `无 tabbar`
 - 1: 'NATIVE_TABBAR' `原生 tabbar`
 - 2: 'CUSTOM_TABBAR' `自定义 tabbar`
-
-> `2025-12-31` 更新，去掉了几乎用不上的 `无缓存的自定义 tabbar（3），只留下了0，1，2`。
 
 ---
 
@@ -28,9 +26,7 @@
   - 优势：可以随意配置自己想要的 `svg icon`，切换字体颜色方便。有缓存。可以实现各种花里胡哨的动效等。
   - 劣势：首次点击 tabbar 会闪烁（据我所知，是无解的）。
 
-上述文档在代码中也有一份，方便开发者查阅。`src/tabbar/README.md`
-
-## 如何配置
+## 策略配置
 
 首先选择使用哪个 `策略`，然后配置对应的 `tabbarList`。代码如下：
 
@@ -38,8 +34,8 @@
 /**
  * tabbar 选择的策略，更详细的介绍见 tabbar.md 文件
  * 0: 'NO_TABBAR' `无 tabbar`
- * 1: 'NATIVE_TABBAR'  `完全原生 tabbar`
- * 2: 'CUSTOM_TABBAR_WITH_CACHE' `有缓存自定义 tabbar`
+ * 1: 'NATIVE_TABBAR'  `原生 tabbar`
+ * 2: 'CUSTOM_TABBAR' `自定义 tabbar`
  *
  * 温馨提示：本文件的任何代码更改了之后，都需要重新运行，否则 pages.json 不会更新导致配置不生效
  */
@@ -50,7 +46,7 @@ export const TABBAR_STRATEGY_MAP = {
 };
 
 // TODO: 1/3. 通过这里切换使用tabbar的策略
-// 如果是使用 NO_TABBAR(0)，nativeTabbarList 和 customTabbarList 都不生效(里面的配置不用管)
+// 如果是使用 NO_TABBAR(0)，nativeTabbarList 和 customTabbarList 都不生效
 // 如果是使用 NATIVE_TABBAR(1)，只需要配置 nativeTabbarList，customTabbarList 不生效
 // 如果是使用 CUSTOM_TABBAR(2)，只需要配置 customTabbarList，nativeTabbarList 不生效
 export const selectedTabbarStrategy = TABBAR_STRATEGY_MAP.CUSTOM_TABBAR;
