@@ -1,8 +1,24 @@
 # UI 库替换篇
 
-## 2025-06-13 更新
+> 2026-01-01 更新：因为新版脚手架提供多种 `UI库` 的选项，用户可以自行选择。如果想选择脚手架提供的 `UI库` 以外的 `UI库`, 则可以选择 `无UI库`, 然后自行添加自己想要的 `UI库`。
 
-因为 `base` 模板加了登录相关的功能，这些功能都是使用 `wot-ui` 开发的，替换起来会很麻烦。如果想要替换成其他 `UI 库`，可以使用 `base-sard-ui` 模板，这个模板是最近添加的。因为最近 `sard-uniapp` 比较火，有群友想要，我就整理了一份最基础的出来，不带登录功能，所以用它来替换成其他 UI 库最合适最方便。
+```txt
+◆  请选择UI库
+│  ● wot-ui
+│  ○ uview-pro
+│  ○ sard-uniapp
+│  ○ uv-ui
+│  ○ uview-plus
+│  ○ 无UI库
+```
+
+- 温馨提示：`uview-plus` 跟 `uv-ui` 是非常类似的，但是 `uview-plus` 需要强制看广告，如果不想看的话，可以选用 `uv-ui`（所以我把 `uv-ui` 排在前面）。
+
+- 温馨提示：不同 `UI库` 的使用占比请看 <https://unibest-tech.github.io/beacon2/>
+
+2026-01-01 数据 `wot-ui`(62.2%) > `uview-pro`(10.0%) > `uview-plus`(7.5%) > `sard-uniapp`(6.1%) > `uv-ui`(4.7%) 【另外 `none` 占比 9.5%】
+
+**下面的文档大概率用不到了，仅做参考。**
 
 ## 默认 UI 库
 
@@ -10,7 +26,7 @@
 
 `wot-ui` 是 `vue3+ts` 编写的全端支持的 UI 库，编码体验比 `uv-ui` 更好；而官方维护的 `uni-ui` 则样式略丑，组件较少，故弃之。
 
-> `wot-ui` 全称 `wot-design-uni`，是 `wot-design` 的 `uniapp` 版本，文档地址：[https://wot-design-uni.netlify.app/](https://wot-design-uni.netlify.app/).
+> `wot-ui` 全称 `wot-design-uni`，是 `wot-design` 的 `uniapp` 版本，文档地址：[https://wot-ui.cn/](https://wot-ui.cn/).
 
 ---
 
@@ -18,10 +34,6 @@
 
 - 先卸载原有的 `wot-ui` 库
 - 再安装其他 `UI 库`
-
-下面我们简单描述一下更换 2 个主流 `UI库` —— `uni-ui` + `uv-ui` 的过程。
-
-> 当然也支持同时存在多个 `UI 库`，有 ES 摇树特性，不必担心打包后的体积。
 
 ## 卸载 wot-ui 库
 
