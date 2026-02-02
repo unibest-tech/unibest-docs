@@ -59,7 +59,7 @@ pnpm create unibest add i18n login
 
 ```bash
 # 克隆本仓库
-git clone https://github.com/unibest-tech/unibest.git my-project
+git clone https://github.com/feige996/unibest.git my-project
 cd my-project
 
 pnpm install
@@ -116,5 +116,5 @@ git commit -m "feat: init project"
 
 `github` 和 `gitee` 实时同步，代码一致。
 
-- https://github.com/unibest-tech/unibest
+- https://github.com/feige996/unibest
 - https://gitee.com/feige996/unibest

@@ -1,7 +1,6 @@
 # 快速开始
 
 - 前置依赖
-
   - **Node.js** - `>=v20` (我的是 `v22.13.0`)
   - **pnpm** - `>=9+` (我的是 `10.11.0`)
   - **`VSCode`** - 可选 `WebStorm`
@@ -75,7 +74,7 @@ git commit -m "feat: init project"
 
 ### 普通模板：
 
-- https://github.com/unibest-tech/unibest
+- https://github.com/feige996/unibest
 - https://gitee.com/feige996/unibest
 
 > `demo` 模板是在 `hello-unibest` 项目中，仓库地址如下：

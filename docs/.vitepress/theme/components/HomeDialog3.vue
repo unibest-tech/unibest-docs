@@ -13,7 +13,7 @@
     这几个版本请求方式添加了cancel导致请求使用很别扭，建议升级到3.18.0版本<br /><br />
     PS: 近期准备开发新版的脚手架，方案设计请看
     <el-link
-      href="https://github.com/unibest-tech/unibest/issues/285"
+      href="https://github.com/feige996/unibest/issues/285"
       target="_blank"
       class="text-blue-500"
       >unibest/issues/285</el-link

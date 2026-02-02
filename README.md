@@ -39,7 +39,7 @@
 <p align="center">
   <a href="https://unibest.tech/" target="_blank">📖 文档地址</a>
   <span style="margin:0 10px;">|</span>
-  <a href="https://github.com/unibest-tech/unibest-tech.github.io" target="_blank">📖 备用地址</a>
+  <a href="https://github.com/feige996/unibest-tech.github.io" target="_blank">📖 备用地址</a>
   <span style="margin:0 10px;">|</span>
   <a href="https://feige996.github.io/hello-unibest/" target="_blank">📱 DEMO 地址</a>
 </p>
