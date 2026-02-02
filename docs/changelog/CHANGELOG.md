@@ -1,6 +1,6 @@
 # CHANGELOG 更新日志
 
-> 完整的更新日志，查看 [github releases 日志](https://github.com/unibest-tech/unibest/releases)
+> 完整的更新日志，查看 [github releases 日志](https://github.com/feige996/unibest/releases)
 
 ## v3.11.0(2025-08-24)
 

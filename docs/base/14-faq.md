@@ -185,6 +185,7 @@ git commit -m "feat: xxx" --no-verify
 - **`base` 分支** - 纯净的基础模板，不包含 CLI 代码，是用户创建项目时克隆的模板
 
 **用户创建项目的流程：**
+
 ```
 pnpm create unibest my-project
          ↓
@@ -199,7 +200,7 @@ CLI 代码在 `packages/cli/` 目录下，发布到 npm 包 `create-unibest`。
 
 ```bash
 # 进入 unibest 仓库
-git clone https://github.com/unibest-tech/unibest.git
+git clone https://github.com/feige996/unibest.git
 cd unibest
 
 # 开发 CLI

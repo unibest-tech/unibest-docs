@@ -32,7 +32,7 @@ pnpm >= 9
 ### 1. 克隆仓库
 
 ```bash
-git clone https://github.com/unibest-tech/unibest.git
+git clone https://github.com/feige996/unibest.git
 cd unibest
 ```
 
@@ -133,6 +133,6 @@ CLI 使用 `@clack/prompts` 提供交互式命令行界面，调试信息会直�
 
 ## 相关资源
 
-- [GitHub 仓库](https://github.com/unibest-tech/unibest)
+- [GitHub 仓库](https://github.com/feige996/unibest)
 - [npm 包](https://www.npmjs.com/package/create-unibest)
-- [AGENTS.md](https://github.com/unibest-tech/unibest/blob/main/AGENTS.md) - AI 开发者指南
+- [AGENTS.md](https://github.com/feige996/unibest/blob/main/AGENTS.md) - AI 开发者指南
