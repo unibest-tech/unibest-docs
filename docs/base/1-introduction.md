@@ -93,126 +93,51 @@ npx degit dcloudio/uni-preset-vue#vite-ts my-vue3-project
 
 ## 📦 目录结构
 
-通过 `tree -I node_modules -I dist -I .git -I .husky -I .trae -I .cursor -I .github -I .hbuilderx -a > tree.md` 命令生成。(update on 2025-12-31)
+### 本仓库结构（CLI 开发者）
 
-```txt
-.
-├── .commitlintrc.cjs
-├── .editorconfig
-├── .gitignore
-├── .npmrc
-├── .vscode
-│   ├── extensions.json
-│   ├── settings.json
-│   └── vue3.code-snippets
-├── env
-│   ├── .env
-│   ├── .env.development
-│   ├── .env.production
-│   └── .env.test
-├── eslint.config.mjs
-├── favicon.ico
-├── index.html
-├── LICENSE
-├── manifest.config.ts
-├── openapi-ts-request.config.ts
-├── package.json
-├── pages.config.ts
-├── pnpm-lock.yaml
-├── README.md
-├── scripts
-│   ├── create-base-files.js
-│   ├── open-dev-tools.js
-│   └── postupgrade.js
-├── src
-│   ├── .DS_Store
-│   ├── api
-│   │   ├── foo-alova.ts
-│   │   ├── foo.ts
-│   │   ├── login.ts
-│   │   └── types
-│   │       └── login.ts
-│   ├── App.ku.vue
-│   ├── App.vue
-│   ├── components
-│   │   └── .gitkeep
-│   ├── env.d.ts
-│   ├── hooks
-│   │   ├── useRequest.ts
-│   │   ├── useScroll.md
-│   │   ├── useScroll.ts
-│   │   └── useUpload.ts
-│   ├── http
-│   │   ├── alova.ts
-│   │   ├── http.ts
-│   │   ├── interceptor.ts
-│   │   ├── README.md
-│   │   ├── tools
-│   │   │   ├── enum.ts
-│   │   │   └── queryString.ts
-│   │   ├── types.ts
-│   │   └── vue-query.ts
-│   ├── layouts
-│   │   └── default.vue
-│   ├── main.ts
-│   ├── manifest.json
-│   ├── pages
-│   │   ├── .DS_Store
-│   │   ├── index
-│   │   │   └── index.vue
-│   │   └── me
-│   │       └── me.vue
-│   ├── pages.json
-│   ├── router
-│   │   ├── interceptor.ts
-│   │   └── README.md
-│   ├── service
-│   │   ├── index.ts
-│   │   ├── info.ts
-│   │   ├── listAll.ts
-│   │   └── types.ts
-│   ├── static
-│   │   ├── app
-│   │   │   └── icons
-│   │   │       ├── 1024x1024.png
-│   │   │       ├── 120x120.png
-│   │   │       ├── 144x144.png
-│   │   │       ├── 152x152.png
-│   │   │       ├── 167x167.png
-│   │   │       ├── 180x180.png
-│   │   │       ├── 192x192.png
-│   │   │       ├── 20x20.png
-│   │   │       ├── 29x29.png
-│   │   │       ├── 40x40.png
-│   │   │       ├── 58x58.png
-│   │   │       ├── 60x60.png
-│   │   │       ├── 72x72.png
-│   │   │       ├── 76x76.png
-│   │   │       ├── 80x80.png
-│   │   │       ├── 87x87.png
-│   │   │       └── 96x96.png
-│   │   ├── images
-│   │   │   ├── avatar.jpg
-│   │   │   └── default-avatar.png
-│   │   ├── logo.svg
-│   │   ├── my-icons
-│   │   │   └── copyright.svg
-│   │   └── tabbar
-│   │       ├── example.png
-│   │       ├── exampleHL.png
-│   │       ├── home.png
-│   │       ├── homeHL.png
-│   │       ├── personal.png
-│   │       ├── personalHL.png
-│   │       └── scan.png
-│   ├── store
-│   │   ├── index.ts
-│   │   ├── token.ts
-│   │   └── user.ts
-│   ├── style
-│   │   ├── iconfont.css
-│   │   └── index.scss
-│   ├── tabbar
+```
+unibest/                    # 主仓库（main 分支）
+├── packages/
+│   └── cli/                # CLI 脚手架工具（发布到 npm）
+├── src/                    # 模板源码
+└── 其他配置文件
+```
+
+> CLI 会从 `base` 分支拉取基础代码生成用户项目。
+
+### 用户项目结构（创建项目后）
+
+```
+my-project/                 # 用户项目
+├── src/                    # 源码
+├── pages.json              # 页面配置
+├── manifest.json           # 应用配置
+├── App.vue                 # 应用入口
+├── main.ts                 # 入口文件
+└── 其他配置文件
+```
+
+> 用户项目不包含 `packages/` 目录。
+
+## 🏗️ 项目架构
+
+unibest 采用 **Monorepo** 架构设计，包含两部分：
+
+1. **模板源码** - 用户创建项目的基础代码
+2. **CLI 脚手架** - `packages/cli/` 目录，发布到 npm 包 `create-unibest`
+
+**用户使用流程：**
+```
+pnpm create unibest my-project
+         ↓
+安装 create-unibest 包（npm）
+         ↓
+从 Git base 分支克隆模板
+```
+
+> 详细的用户项目目录结构，请查看 [快速开始篇](./2-start)。
+
+## 🗂 生成过程
 │   │   ├── config.ts
 │   │   ├── index.vue
 │   │   ├── README.md
