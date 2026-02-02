@@ -179,4 +179,39 @@ git commit -m "feat: xxx" --no-verify
 
 > 如果还不行，那就把 pnpm 升级到 `pnpm 10`。
 
+## 17. unibest 项目的 `main` 分支和 `base` 分支有什么区别？
+
+- **`main` 分支** - 包含 CLI 工具代码（`packages/cli/`）和模板源码，是 CLI 开发的主要分支
+- **`base` 分支** - 纯净的基础模板，不包含 CLI 代码，是用户创建项目时克隆的模板
+
+**用户创建项目的流程：**
+```
+pnpm create unibest my-project
+         ↓
+安装 create-unibest 包（来自 main 分支发布到 npm）
+         ↓
+从 Git base 分支克隆模板
+```
+
+## 18. 如何参与 CLI 开发？
+
+CLI 代码在 `packages/cli/` 目录下，发布到 npm 包 `create-unibest`。
+
+```bash
+# 进入 unibest 仓库
+git clone https://github.com/unibest-tech/unibest.git
+cd unibest
+
+# 开发 CLI
+cd packages/cli
+pnpm install
+pnpm dev    # 开发模式
+pnpm build  # 构建发布
+
+# 测试本地 CLI
+pnpm start -- my-test-project
+```
+
+详情请查看 [CLI 开发篇](./18-cli)。
+
 全文完~

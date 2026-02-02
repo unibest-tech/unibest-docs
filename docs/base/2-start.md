@@ -1,54 +1,74 @@
 # 快速开始
 
-- 前置依赖
+## 前置依赖
 
-  - **`Node.js`** - `>=v20` (我的是 `v22.13.0`)
-  - **`Pnpm`** - `>=9` (我的是 `10.11.0`)
-  - **`VSCode`** - 可选其他 `IDE` ：`Trae`、`Cursor` 、`WebStorm` 等
-  - **`HBuilderX`** - `APP` 的运行和发布离不开它
-  - **`Git`** - 必须有 `git`，否则 `husky` 会报错
+- **`Node.js`** - `>=v20` (我的是 `v22.13.0`)
+- **`Pnpm`** - `>=9` (我的是 `10.11.0`)
+- **`VSCode`** - 可选其他 `IDE` ：`Trae`、`Cursor` 、`WebStorm` 等
+- **`HBuilderX`** - `APP` 的运行和发布离不开它
+- **`Git`** - 必须有 `git`，否则 `husky` 会报错
 
-## 创建项目
+## 使用方式
 
-`2025-11-04` 开发了新版的 `create-unibest`，对生成的项目进行了精简，并且对配置型进行了优化。可以自行选择想要的平台和 UI 库等。
+### 方式一：通过 CLI 创建新项目（推荐）
 
-> 如果想用 `v2` 版的，则可以 `pnpm create unibest@v2`。
+通过 CLI 创建项目是**推荐**的方式，可以选择平台、UI 库、登录策略、多语言等配置。
 
-通过下面的命令可以快速生成项目模板:
+```bash
+# 全局安装 CLI
+pnpm add -g create-unibest
 
-`pnpm create unibest`
+# 创建项目
+pnpm create unibest my-project
 
-> `空格` 选择/取消选择，`A` 全选/取消全选，`Enter` 确认选择，上下键切换当前选项。
-
-```text
-feige996 ~ % pnpm create unibest
-┌  create-unibest@v3.1.2 快速创建 unibest@v4.1.1 项目
-│
-◇  请输入项目名称[项目名称只能包含字母、数字、下划线和短横线，千万别写中文]
-│  uni-demo
-│
-◆ 请选择需要支持的平台（多选）[脚手架将根据所选平台生成对应的平台代码，请根据实际情况选择]
-│  ◼ H5
-│  ◻ 微信小程序
-│  ◻ APP
-│  ◻ 支付宝小程序（包含钉钉）
-│  ◻ 抖音小程序
-│
-◆  请选择UI库
-│  ● 无UI库
-│  ○ wot-ui
-│  ○ uview-pro
-│  ○ sard-uniapp
-│  ○ uv-ui
-│  ○ uview-plus
-◆  是否需要登录策略（黑白名单、登录拦截等）？[暂不知道的，选No即可，项目生成后也可以加该策略]
-│  ○ Yes / ● No
-◆  是否需要多语言i18n？
-│  ○ Yes / ● No
-◆  项目uni-demo创建成功！
+cd my-project
+pnpm install
+pnpm dev
 ```
 
-## 生成流程
+CLI 会从 Git `base` 分支克隆基础模板。
+
+### 方式二：创建时选择 Feature
+
+```bash
+# 创建项目并选择功能
+pnpm create unibest my-project
+
+# 或通过命令行参数直接指定
+pnpm create unibest my-project --i18n --login
+```
+
+### 方式三：创建后添加 Feature
+
+```bash
+cd my-project
+
+# 添加多语言
+pnpm create unibest add i18n
+
+# 添加登录策略
+pnpm create unibest add login
+
+# 同时添加多个
+pnpm create unibest add i18n login
+```
+
+### 方式四：直接克隆开发（备选）
+
+如果不想通过 CLI，也可以直接克隆仓库作为基础模板：
+
+```bash
+# 克隆本仓库
+git clone https://github.com/unibest-tech/unibest.git my-project
+cd my-project
+
+pnpm install
+pnpm dev        # 运行 H5
+pnpm dev:mp     # 运行微信小程序
+pnpm dev:app    # 运行 App
+```
+
+> 直接克隆会包含 CLI 工具代码，如不需要可以忽略 `packages/` 目录。
 
 根据 `登录策略` 和 `i18n` 是否选择，会使用 4 个分支代码生成基础代码
 
