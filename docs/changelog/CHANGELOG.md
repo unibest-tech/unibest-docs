@@ -1,6 +1,18 @@
 # CHANGELOG 更新日志
 
-> 完整的更新日志，查看 [github releases 日志](https://github.com/feige996/unibest/releases)
+> 完整的更新日志，查看 [github releases 日志](https://github.com/unibest-tech/unibest/releases)
+
+## v4.0.0(2026-02-02)
+
+### 重大更新 - CLI 脚手架重构
+
+- **Monorepo 架构**：整合 CLI 脚手架到主仓库
+  - 新增 `packages/cli/` 目录，发布到 npm 包 `create-unibest`
+  - CLI 从 Git base 分支克隆模板
+- **新增 Feature 机制**：支持动态注入 i18n、login 等功能
+- **简化使用方式**：支持命令行参数 `--i18n --login`
+- **新增 CLI 开发指南**：详见 [CLI 开发篇](/base/18-cli)
+- **文档更新**：新增使用方式优先级、架构说明等内容
 
 ## v3.11.0(2025-08-24)
 
