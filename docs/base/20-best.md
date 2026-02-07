@@ -29,3 +29,7 @@ pnpm create unibest my-project -t base
 - [常见问题](/base/14-faq)
 - [常见问题 2](/base/15-faq)
 - [运行发布](/base/11-build)
+
+## 抖音小程序开发者工具下载地址
+
+- [https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/dev-tools/developer-instrument/download/developer-instrument-update-and-download](https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/dev-tools/developer-instrument/download/developer-instrument-update-and-download)
