@@ -35,7 +35,7 @@ CLI 会从 Git `base` 分支克隆基础模板。
 pnpm create unibest my-project
 
 # 或通过命令行参数直接指定
-pnpm create unibest my-project --i18n --login
+pnpm create unibest my-project --i18n --login --lime-echart --ucharts
 ```
 
 ### 方式三：创建后添加 Feature
@@ -49,35 +49,13 @@ pnpm create unibest add i18n
 # 添加登录策略
 pnpm create unibest add login
 
+# 添加图表库
+pnpm create unibest add lime-echart
+pnpm create unibest add ucharts
+
 # 同时添加多个
-pnpm create unibest add i18n login
+pnpm create unibest add i18n login lime-echart ucharts
 ```
-
-### 方式四：直接克隆开发（备选）
-
-如果不想通过 CLI，也可以直接克隆仓库作为基础模板：
-
-```bash
-# 克隆本仓库
-git clone https://github.com/feige996/unibest.git my-project
-cd my-project
-
-pnpm install
-pnpm dev        # 运行 H5
-pnpm dev:mp     # 运行微信小程序
-pnpm dev:app    # 运行 App
-```
-
-> 直接克隆会包含 CLI 工具代码，如不需要可以忽略 `packages/` 目录。
-
-根据 `登录策略` 和 `i18n` 是否选择，会使用 4 个分支代码生成基础代码
-
-- 当没有选`登录策略`，也没有选 `i18n`，则会使用 `base` 分支代码。
-- 当选了`登录策略`，也没有选 `i18n`，则会使用 `base-login` 分支代码。
-- 当没有选`登录策略`，选了 `i18n`，则会使用 `base-i18n` 分支代码。
-- 当选了`登录策略`，选了 `i18n`，则会使用 `base-login-i18n` 分支代码。
-
-接下来会根据所选的平台和 UI 库，生成对应的代码（动态插入）。
 
 ## 安装、运行
 
