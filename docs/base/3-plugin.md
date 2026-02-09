@@ -174,6 +174,17 @@ UniPages({
 </route>
 ```
 
+如果是 `definePage`写法则为：
+
+```ts [src/pages/demo.vue]
+definePage({
+  layout: 'demo',
+  style: {
+    navigationBarTitleText: '关于',
+  },
+});
+```
+
 ```vue [src/layouts/demo.vue]
 <template>
   <view>
