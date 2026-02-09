@@ -73,7 +73,7 @@ export const sidebar = [
     base: '/advanced/',
     items: [
       { text: '🥤 打赏', link: 'rewards/rewards' },
-      { text: '交流群', link: 'wechat/wechat' },
+      // { text: '交流群', link: 'wechat/wechat' },
       // {
       //   text: '联系我',
       //   link: 'contact/contact',
