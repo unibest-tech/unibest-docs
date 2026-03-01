@@ -22,7 +22,7 @@ const data = ref({
     {
       icon: 'https://registration-bucket.oss-cn-shanghai.aliyuncs.com/tickets/attachments/20251230/fb86e570e47b415ebee7cccd0378b009_图层 2.png',
       title: 'CCFly',
-      details: '纯血版 Claude Code 中转服务，稳定可靠的 AI 接入方案',
+      details: 'Claude Code 中转服务 | AI编程助手 | 国内直连',
       link: 'https://ccfly.codes/?inviteCode=KVB090KC',
       iconWidth: '60px',
     },
