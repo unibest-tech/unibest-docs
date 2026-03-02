@@ -48,9 +48,10 @@ const data = ref([
     items: [
       {
         name: 'FinClip',
-        desc: '无需重构，非侵入集成SKD就搞定！装下无限县程序，你的APP也能变”微信“',
+        desc: '无需重构，非侵入集成SKD就搞定！装下无限小程序，你的APP也能变”微信“',
         img: 'https://oss.laf.run/ukw0y1-site/unibest-discussion-group/finclip2.jpg',
         url: 'https://marketplace.finclip.com/?utm_source=kol-cpc&utm_medium=unibest&utm_campaign=docs ',
+        iconWidth: '160px',
       },
       {
         name: 'ccfly',
