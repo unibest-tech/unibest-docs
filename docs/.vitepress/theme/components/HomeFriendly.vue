@@ -17,7 +17,7 @@ const data = ref({
       details:
         '无需重构App，非侵入集成 3MB SDK，即可将现有小程序迁移部署到自有App中，一次开发兼容 iOS、Android、Harmony OS、智能设备（车机、IoT ）等多端运行。 ',
       link: 'https://marketplace.finclip.com/?utm_source=kol-cpc&utm_medium=unibest&utm_campaign=web-home',
-      iconWidth: '80px',
+      iconWidth: '48px',
     },
     {
       icon: 'https://registration-bucket.oss-cn-shanghai.aliyuncs.com/tickets/attachments/20251230/fb86e570e47b415ebee7cccd0378b009_图层 2.png',
