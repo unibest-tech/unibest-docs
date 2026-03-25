@@ -47,11 +47,11 @@ const data = ref([
     size: 'large',
     items: [
       {
-        name: 'FinClip',
-        desc: '无需重构，非侵入集成SKD就搞定！装下无限小程序，你的APP也能变”微信“',
-        img: 'https://oss.laf.run/ukw0y1-site/unibest-discussion-group/finclip2.jpg',
-        url: 'https://marketplace.finclip.com/?utm_source=kol-cpc&utm_medium=unibest&utm_campaign=docs ',
-        iconWidth: '160px',
+        name: 'Ruoyi-Plus-Uniapp',
+        img: 'https://oss.laf.run/ukw0y1-site/sponsor/ruoyi-plus-uniapp.png',
+        desc: 'AI驱动全栈开发，一套代码三端交付',
+        url: 'https://ruoyi.plus',
+        iconWidth: '200px',
       },
       {
         name: 'ccfly',
@@ -59,6 +59,13 @@ const data = ref([
         desc: '稳定、快速、无限制的 Claude Code 体验。开发效率提升 10 倍，从这里开始。',
         url: 'https://ccfly.codes/?inviteCode=KVB090KC',
         iconWidth: '80px',
+      },
+      {
+        name: 'FinClip',
+        desc: '无需重构，非侵入集成SKD就搞定！装下无限小程序，你的APP也能变”微信“',
+        img: 'https://oss.laf.run/ukw0y1-site/unibest-discussion-group/finclip2.jpg',
+        url: 'https://marketplace.finclip.com/?utm_source=kol-cpc&utm_medium=unibest&utm_campaign=docs ',
+        iconWidth: '160px',
       },
     ],
   },
