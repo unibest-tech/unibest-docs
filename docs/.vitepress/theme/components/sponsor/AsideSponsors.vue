@@ -49,7 +49,7 @@ const data = ref([
       {
         name: 'Ruoyi-Plus-Uniapp',
         img: 'https://oss.laf.run/ukw0y1-site/sponsor/ruoyi-plus-uniapp.png',
-        desc: 'AI驱动全栈开发，一套代码三端交付',
+        desc: 'AI驱动全栈开发，一套代码三端交付，框架即文档',
         url: 'https://ruoyi.plus',
         iconWidth: '200px',
       },
