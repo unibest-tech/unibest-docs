@@ -12,6 +12,14 @@ const data = ref({
     //   link: 'https://uni-helper.js.org/',
     // },
     {
+      title: 'Ruoyi-Plus-Uniapp',
+      icon: 'https://oss.laf.run/ukw0y1-site/sponsor/ruoyi-plus-uniapp.png',
+      details:
+        'Ruoyi-Plus-Uniapp 是AI原生Java全栈开发框架，基于 Spring Boot 3 + Vue 3 + UniApp，内置AI技能体系，覆盖后端、前端、移动端全流程开发。',
+      link: 'https://ruoyi.plus',
+      iconWidth: '100px',
+    },
+    {
       icon: 'https://oss.laf.run/ukw0y1-site/unibest-discussion-group/finclip.jpg',
       title: 'FinClip 小程序容器',
       details:
@@ -26,14 +34,14 @@ const data = ref({
       link: 'https://ccfly.codes/?inviteCode=KVB090KC',
       iconWidth: '60px',
     },
-    {
-      icon: 'https://oss.laf.run/ukw0y1-site/onlinenotepad101.jpg',
-      title: '在线记事本 – 免费在线文本编辑器',
-      details:
-        '最好用的在线记事本，专为无干扰写作、高效记笔记。完全免费，无需注册，打开即用，支持富文本内容编辑。支持保存、导出，以及分享给其他人。简洁流畅，专注创作。',
-      link: 'https://onlinenotepad101.org/zh',
-      iconWidth: '60px',
-    },
+    // {
+    //   icon: 'https://oss.laf.run/ukw0y1-site/onlinenotepad101.jpg',
+    //   title: '在线记事本 – 免费在线文本编辑器',
+    //   details:
+    //     '最好用的在线记事本，专为无干扰写作、高效记笔记。完全免费，无需注册，打开即用，支持富文本内容编辑。支持保存、导出，以及分享给其他人。简洁流畅，专注创作。',
+    //   link: 'https://onlinenotepad101.org/zh',
+    //   iconWidth: '60px',
+    // },
     // {
     //   icon: 'https://static.yicode.tech/chensuiyi-128x128.jpg',
     //   title: '陈随易',
@@ -62,7 +70,6 @@ const grid = computed(() => {
   <div v-if="links && links.length" class="VPFeatures">
     <div class="container">
       <h1 class="friendly-title">友情链接</h1>
-
       <div class="items">
         <div v-for="feature in links" :key="feature.title" class="item" :class="[grid]">
           <VPFeature
