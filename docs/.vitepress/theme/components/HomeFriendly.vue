@@ -12,7 +12,7 @@ const data = ref({
     //   link: 'https://uni-helper.js.org/',
     // },
     {
-      title: 'Ruoyi-Plus-Uniapp',
+      title: 'Ruoyi-Plus-Uniapp', // 2026-03-25 开始，一年半，到 2027-09-25 过期
       icon: 'https://oss.laf.run/ukw0y1-site/sponsor/ruoyi-plus-uniapp.png',
       details:
         'Ruoyi-Plus-Uniapp 是AI原生Java全栈开发框架，基于 Spring Boot 3 + Vue 3 + UniApp，内置AI技能体系，覆盖后端、前端、移动端全流程开发。',
