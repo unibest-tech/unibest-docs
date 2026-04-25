@@ -1,16 +1,37 @@
 # UI 库替换篇
 
-> 2026-01-01 更新：因为新版脚手架提供多种 `UI库` 的选项，用户可以自行选择。如果想选择脚手架提供的 `UI库` 以外的 `UI库`, 则可以选择 `无UI库`, 然后自行添加自己想要的 `UI库`。
+> 2026-04-25 更新：脚手架新增 `wot-ui-v2` 选项（`@wot-ui/ui`），并在交互中前置显示；`wot-ui` 表示 `v1`（`wot-design-uni`）用于兼容老项目。
 
 ```txt
 ◆  请选择UI库
-│  ● wot-ui
+│  ● wot-ui-v2
+│  ○ wot-ui（v1）
 │  ○ uview-pro
 │  ○ sard-uniapp
 │  ○ uv-ui
 │  ○ uview-plus
 │  ○ 无UI库
 ```
+
+## wot-ui-v2（推荐）
+
+`wot-ui-v2` 对应官方 `Wot UI 2.x` 的 npm 包：`@wot-ui/ui`。
+
+- 创建命令：
+
+```sh
+pnpm create unibest my-project -u wot-ui-v2 -p h5,mp-weixin
+```
+
+- 脚手架会自动处理以下配置：
+  - 安装 `@wot-ui/ui`
+  - 在 `pages.config.ts` 注入 `easycom` 规则 `^wd-(.*)`
+  - 在 `tsconfig.json` 注入 `@wot-ui/ui/global`
+  - 补充 `sass` 依赖
+  - 生成与 `vite.config.ts` 同级的 `wot-ui-resolver.ts`
+  - 在 `vite.config.ts` 的 `UniComponents` 中注入 `resolvers: [WotResolver()]`
+
+> 官方文档参考：[Wot UI 快速上手](https://wot-ui.cn/guide/quick-use.html)
 
 - 温馨提示：`uview-plus` 跟 `uv-ui` 是非常类似的，但是 `uview-plus` 需要强制看广告，如果不想看的话，可以选用 `uv-ui`（所以我把 `uv-ui` 排在前面）。
 

@@ -14,7 +14,7 @@ import ElementPlus from 'element-plus';
 import SpecialSponsor from './components/sponsor/SpecialSponsor.vue';
 import AsideSponsors from './components/sponsor/AsideSponsors.vue';
 import SidebarSponsor from './components/sponsor/SidebarSponsor.vue';
-import ChartAnnouncement from './components/ChartAnnouncement.vue';
+import WotUiV2Announcement from './components/WotUiV2Announcement.vue';
 import 'element-plus/dist/index.css';
 import 'element-plus/theme-chalk/dark/css-vars.css';
 
@@ -24,7 +24,7 @@ export default {
     // https://vitepress.dev/guide/extending-default-theme#layout-slots
     return h(DefaultTheme.Layout, null, {
       // 'layout-top': () => h(Banner),
-      'home-hero-after': () => h(ChartAnnouncement),
+      'home-hero-after': () => h(WotUiV2Announcement),
       'home-hero-info-after': () => h(SpecialSponsor, { title: '砖石赞助商' }),
       // 'home-hero-info-after': () => h(HomeStar), // github star
       'sidebar-nav-before': () => h(SidebarSponsor),

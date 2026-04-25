@@ -2,6 +2,14 @@
 
 > 完整的更新日志，查看 [github releases 日志](https://github.com/unibest-tech/unibest/releases)
 
+## v4.0.16(2026-04-25)
+
+### CLI 新增 `wot-ui-v2` 支持
+
+- 新增 UI 选项 `wot-ui-v2`（`@wot-ui/ui`），并在交互中前置显示
+- 保留 `wot-ui`（`wot-design-uni`）用于兼容旧项目
+- 选择 `wot-ui-v2` 时自动注入 `wot-ui-resolver.ts` 与 `vite.config.ts` 的 `UniComponents` resolver 配置，修复 H5 下 `wd-*` 组件样式不生效问题
+
 ## v4.0.15(2026-02-14)
 
 ### 新增图表库支持
