@@ -162,3 +162,15 @@ export const tabBar = tabbarCacheEnable ? _tabbar : undefined;
 ```
 
 上面的代码已经传到各个主分支了。
+
+## 自定义 tabbar 状态同步
+
+自定义 tabbar 的选中状态以当前页面栈为准，模板会在应用恢复、H5 页面重新显示、tabbar 点击完成后重新同步一次 `curIdx`。
+
+如果你在业务里手动改了路由逻辑，注意下面几点：
+
+- tabbar 页面跳转优先使用 `uni.switchTab`，不要只手动修改 `tabbarStore.curIdx`。
+- 非 tabbar 页面返回后，不要强制把 `curIdx` 改成首页；应保留页面栈里最近的 tabbar 页面。
+- 登录拦截、分享进入、H5 最小化后恢复这类场景，页面栈可能比生命周期参数更可靠，优先调用 `tabbarStore.syncCurIdxByCurrentPageAsync()`。
+
+如果出现“页面已经切过去，但 tabbar 高亮不对”或“点击当前高亮 tab 没反应”，优先检查是否有业务代码提前 return，或者是否只根据缓存的 `curIdx` 判断当前页面。

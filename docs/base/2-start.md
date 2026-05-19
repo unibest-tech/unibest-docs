@@ -70,6 +70,18 @@ pnpm dev:app # 运行App
 
 > 其他平台构建和发布，查看 [运行发布篇](./11-build)。
 
+### 平台依赖安装注意事项
+
+`@esbuild/darwin-*`、`@rollup/rollup-darwin-*` 这类包是 esbuild、rollup 自己管理的平台可选依赖，不需要手动添加到项目的 `package.json`。
+
+macOS 用户也不需要手动安装它们；pnpm 会按当前系统自动安装匹配的平台包。`pnpm-lock.yaml` 里出现这些平台包是正常的，但项目 `package.json` 里不应该把它们作为直接依赖。
+
+如果旧项目曾经直接添加过这些平台包，先从 `package.json` 中删除，再重新安装：
+
+```bash
+pnpm install
+```
+
 ## 第一次 `commit`
 
 ```bash
