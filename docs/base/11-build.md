@@ -6,6 +6,8 @@
 - `wx 小程序`：`pnpm dev:mp-weixin`，然后打开微信开发者工具，导入本地文件夹，选择本项目的 `dist/dev/mp-weixin` 文件。
 - ![alt text](./assets/11-1.png)
 
+> 项目会尝试自动打开微信开发者工具。如果控制台出现 `timeout` 或自动打开失败，通常是微信开发者工具安装路径和默认路径不一致，或开发者工具服务端口未启用。可以手动打开微信开发者工具并导入 `dist/dev/mp-weixin`，也可以在本机环境变量中配置 `WECHAT_DEVTOOLS_CLI_PATH` 为实际 CLI 路径。
+
 - `APP 平台`：`pnpm dev:app`，然后打开 `HBuilderX`，导入刚刚生成的 `dist/dev/app` 文件夹，选择运行到 `模拟器`( `开发时优先使用` )，或者 `运行到 ios 基座` (真机调试时使用) 。
 
 > **如果不是 `iOS` 端 ，请查看 [App 专题章节 - 3.app 热更新](/base/18-app#_3-app-热更新)**

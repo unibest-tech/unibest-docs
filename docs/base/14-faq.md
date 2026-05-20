@@ -57,15 +57,28 @@ git commit -m "feat: xxx" --no-verify
 
 第三方库还有另外一种处理方式，放到特定的文件夹，然后在 `.eslintignore` 和 `.styleintignore` 里面加上该文件夹。
 
-## 6. 不想要严格的 `git` 提交检测，怎么办？
+## 6. 启动微信小程序时出现 `timeout` 是什么意思？
+
+这通常不是项目编译失败，也不是业务接口请求超时，而是项目尝试自动打开微信开发者工具时失败或超时。
+
+项目默认会使用下面的微信开发者工具 CLI 路径：
+
+- macOS：`/Applications/wechatwebdevtools.app/Contents/MacOS/cli`
+- Windows：`C:\Program Files (x86)\Tencent\微信web开发者工具\cli.bat`
+
+如果你的微信开发者工具安装位置不同，可以在本机环境变量里配置 `WECHAT_DEVTOOLS_CLI_PATH` 为实际 CLI 路径。
+
+如果不想配置，也可以手动打开微信开发者工具，导入项目里的 `dist/dev/mp-weixin` 目录。还需要确认微信开发者工具的服务端口已经开启。
+
+## 7. 不想要严格的 `git` 提交检测，怎么办？
 
 直接把 `.husky` 这个文件删掉即可。(或者不删除，只把里面的文件内容注释掉。)
 
-## 7. `uni-app` 无法使用 `process.env` 变量，怎么办？
+## 8. `uni-app` 无法使用 `process.env` 变量，怎么办？
 
 使用 `import.meta.env` 替代！
 
-## 8. 如何跟随 `uni-app` 官方升级？
+## 9. 如何跟随 `uni-app` 官方升级？
 
 项目下，执行 `npx @dcloudio/uvm@latest` 即可更新。
 
@@ -73,7 +86,7 @@ git commit -m "feat: xxx" --no-verify
 
 > 注意，上面的命令会自动安装 `vue-i18n`，可以手动删除（`pnpm un vue-i18n`)，也可以不理它（没多大影响）。
 
-## 9. 如何把已经加入 `git` 管理的文件移出 `git` 管理?
+## 10. 如何把已经加入 `git` 管理的文件移出 `git` 管理?
 
 - 第一步，先把文件移出`git` 管理，操作如下：
 
@@ -87,7 +100,7 @@ git commit -m "feat: xxx" --no-verify
 
 > 总结：`git rm -r --cached .` + `git commit` 即可。
 
-## 10. 支付宝小程序运行报错。
+## 11. 支付宝小程序运行报错。
 
 - 默认运行是会报错的，如下图
   ![alt text](./assets/14-2.png)
@@ -97,13 +110,13 @@ git commit -m "feat: xxx" --no-verify
 
 > 总结：勾上 `本地开发跳过 ES5 转译` 即可。
 
-## 11. 支持 `uni-app x` 吗？
+## 12. 支持 `uni-app x` 吗？
 
 不支持。但我们一直保持关注。[uni-app x 传送门](https://doc.dcloud.net.cn/uni-app-x/)
 
 目前 `unibest` 已经有 `hbx` 模板，后续接入 `uni-app x` 会很容易，坐等官方发布。
 
-## 12. 为啥 `package.json` 中 `vue` 已经 `3.4+` 了，还不支持 `defineModel` ?
+## 13. 为啥 `package.json` 中 `vue` 已经 `3.4+` 了，还不支持 `defineModel` ?
 
 `uni-app` 官方虽然已经把 `vue` 升级到 `3.4+` 了，但是目前只有 `H5端` 支持 `defineModel`，其他端目前运行报错，详情请看 `uni-app` 官网的发布日志：
 
@@ -119,7 +132,7 @@ git commit -m "feat: xxx" --no-verify
 
 ![alt text](./assets/14-6.png)
 
-## 13. `base` 模板如何接 `uniCloud` ?
+## 14. `base` 模板如何接 `uniCloud` ?
 
 - 1. 操作方案：直接在原始项目目录上右键（就是导入整个 unibest 项目文件夹），重新识别项目类型，就可以关联 `uniCloud` 了，然后用原始项目直接运行就可以了，不需要再 `pnpm dev:app` 后导入 `dist/dev/app` 再运行了。
 
@@ -127,7 +140,7 @@ git commit -m "feat: xxx" --no-verify
 
 - 3. 我写的文章链接：[【unibest】可以去掉 hbx 模版了，base 模板一统天下](https://mp.weixin.qq.com/s?__biz=MzUxMzAwNzMwNw==&mid=2247484792&idx=1&sn=b6116198f265384e5a51bd2bd95bea90&chksm=f95a8edcce2d07caba60782e17e48d766612c0ad85c019379fd5ac37890e31b6ca7049e670f7&scene=178&cur_album_id=3438500614009782275#rd)
 
-## 14. 微信小程序编译报错
+## 15. 微信小程序编译报错
 
 ```text
 [ WXSS 文件编译错误]
@@ -148,7 +161,7 @@ git commit -m "feat: xxx" --no-verify
 
 如果还是有问题，建议试试使用我模板里面的 lock 文件，我模板里面的 lock 文件是稳定的。
 
-## 15. ios 模拟器运行报错
+## 16. ios 模拟器运行报错
 
 ```text
 14:20:36.428 编译器版本：4.66（vue3）
@@ -171,7 +184,7 @@ git commit -m "feat: xxx" --no-verify
 
 把 `package.json` 中的 `esbuild` 版本改为 `0.20.2` 即可。
 
-## 16. pnpm i 报错
+## 17. pnpm i 报错
 
 `pnpm 9 + node 18` 目前出现以下问题：`ERR PNPM INVALID WORKSPACE CONFIGURATIoN packages field missing or empty`
 
@@ -179,7 +192,7 @@ git commit -m "feat: xxx" --no-verify
 
 > 如果还不行，那就把 pnpm 升级到 `pnpm 10`。
 
-## 17. unibest 项目的 `main` 分支和 `base` 分支有什么区别？
+## 18. unibest 项目的 `main` 分支和 `base` 分支有什么区别？
 
 - **`main` 分支** - 包含 CLI 工具代码（`packages/cli/`）和模板源码，是 CLI 开发的主要分支
 - **`base` 分支** - 纯净的基础模板，不包含 CLI 代码，是用户创建项目时克隆的模板
@@ -194,7 +207,7 @@ pnpm create unibest my-project
 从 Git base 分支克隆模板
 ```
 
-## 18. 如何参与 CLI 开发？
+## 19. 如何参与 CLI 开发？
 
 CLI 代码在 `packages/cli/` 目录下，发布到 npm 包 `create-unibest`。
 
