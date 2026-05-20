@@ -155,6 +155,45 @@ UniPages({
 });
 ```
 
+### 额外配置页面和条件页面
+
+普通页面建议直接放到 `src/pages`，通过文件路由自动生成 `pages.json`。如果确实有少量页面不能通过文件路由生成，也可以在 `pages.config.ts` 中追加 uni-app 原生的 `pages` 配置。
+
+```ts [pages.config.ts]
+export default defineUniPages({
+  pages: [
+    {
+      path: 'pages/manual/index',
+      style: {
+        navigationBarTitleText: '手动配置页面',
+      },
+    },
+  ],
+})
+```
+
+如果页面只在某个平台存在，不要手动修改生成后的 `pages.json`。推荐把平台差异放到独立目录，然后在 `vite.config.ts` 的 `UniPages` 配置中按 `UNI_PLATFORM` 控制 `exclude`、`include` 或 `subPackages`。
+
+```ts [vite.config.ts]
+const { UNI_PLATFORM } = process.env
+const excludePages: string[] = ['**/components/**/**.*']
+const subPackages: string[] = ['src/pages-demo']
+
+if (UNI_PLATFORM === 'mp-weixin') {
+  subPackages.push('src/pages-weixin')
+}
+else {
+  excludePages.push('src/pages-weixin/**/**.*')
+}
+
+UniPages({
+  exclude: excludePages,
+  subPackages,
+})
+```
+
+`pages.config.ts` 适合放全局配置和少量手动页面；单个页面自己的标题、导航栏等配置，仍然优先写在页面的 `route` 代码块里。
+
 ## vite-plugin-uni-layouts
 
 得益于 [@uni-helper/vite-plugin-uni-layouts](https://github.com/uni-helper/vite-plugin-uni-layouts)，你可以轻松地切换不同的布局。
