@@ -66,7 +66,15 @@ git commit -m "feat: xxx" --no-verify
 - macOS：`/Applications/wechatwebdevtools.app/Contents/MacOS/cli`
 - Windows：`C:\Program Files (x86)\Tencent\微信web开发者工具\cli.bat`
 
-如果你的微信开发者工具安装位置不同，可以在本机环境变量里配置 `WECHAT_DEVTOOLS_CLI_PATH` 为实际 CLI 路径。
+如果你的微信开发者工具安装位置不同，可以在项目 `env/.env` 中配置 `WECHAT_DEVTOOLS_CLI_PATH` 为实际 CLI 路径，配置一次后后续直接运行 `pnpm dev:mp-weixin` 即可。
+
+```env
+# macOS 示例：
+# WECHAT_DEVTOOLS_CLI_PATH = '/Applications/wechatwebdevtools.app/Contents/MacOS/cli'
+
+# Windows 示例：
+# WECHAT_DEVTOOLS_CLI_PATH = 'C:\Program Files (x86)\Tencent\微信web开发者工具\cli.bat'
+```
 
 如果不想配置，也可以手动打开微信开发者工具，导入项目里的 `dist/dev/mp-weixin` 目录。还需要确认微信开发者工具的服务端口已经开启。
 
