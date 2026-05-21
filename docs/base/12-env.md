@@ -56,6 +56,8 @@ Vite 允许你为不同的构建环境指定不同的模式。通常在 `npm scr
 
 故，如上配置 `pnpm dev` 与 `pnpm dev-dev` 是一个效果。
 
+在 `uni-app` 项目中还需要注意平台差异：H5 端 `pnpm dev:h5` 对应 Vite 的 `serve development`，`pnpm build:h5` 对应 `build production`；小程序和 App 端的 `pnpm dev:*` 也会进入 Vite 的 `build` 流程，只是默认 `mode` 仍是 `development`。如果脚本显式传入 `--mode test` 或 `--mode production`，则会加载对应的 `env/.env.test` 或 `env/.env.production`。最终加载哪个环境文件，可以查看启动时打印的 `command, mode`。
+
 ## `uni` 环境变量
 
 `uni` 环境变量这里指运行 `uni` 的平台变量，通过 `vite` 的 `define` 配置可以暴露出来。

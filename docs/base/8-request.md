@@ -124,6 +124,18 @@ const { loading, data, run } = useUpload<string>({ user: '菲鸽' })
 VITE_SERVER_BASEURL = 'https://ukw0y1.laf.run'
 ```
 
+`VITE_SERVER_BASEURL` 是默认请求地址。不同命令会按 `mode` 叠加读取 `env/.env.development`、`env/.env.test`、`env/.env.production`，最终以实际运行时打印的 `command, mode` 为准。
+
+微信小程序会先读取专用地址；如果没有配置专用地址，就回退使用 `VITE_SERVER_BASEURL`。如果需要按微信小程序的开发版、体验版、正式版分别配置后台地址，可以增加下面的可选变量：
+
+```text
+VITE_SERVER_BASEURL__WEIXIN_DEVELOP = 'https://dev.xxx.com'
+VITE_SERVER_BASEURL__WEIXIN_TRIAL = 'https://trial.xxx.com'
+VITE_SERVER_BASEURL__WEIXIN_RELEASE = 'https://prod.xxx.com'
+```
+
+没有配置这些微信小程序专用变量时，会继续使用默认请求地址 `VITE_SERVER_BASEURL`。
+
 并且在 `src/interceptors/request.ts` 里面有设置：
 
 - 如果是 `http` 开头的请求路径，则直接请求
@@ -226,6 +238,16 @@ export const httpPost = <T>(
 
 ```text
 VITE_SERVER_BASEURL = 'https://ukw0y1.laf.run'
+```
+
+- `VITE_SERVER_BASEURL` 是默认请求地址。不同命令会按 `mode` 叠加读取 `env/.env.development`、`env/.env.test`、`env/.env.production`，最终以实际运行时打印的 `command, mode` 为准。
+
+- 微信小程序会先读取专用地址；如果没有配置专用地址，就回退使用 `VITE_SERVER_BASEURL`。如果需要按微信小程序环境单独配置，可以追加：
+
+```text
+VITE_SERVER_BASEURL__WEIXIN_DEVELOP = 'https://dev.xxx.com'
+VITE_SERVER_BASEURL__WEIXIN_TRIAL = 'https://trial.xxx.com'
+VITE_SERVER_BASEURL__WEIXIN_RELEASE = 'https://prod.xxx.com'
 ```
 
 - `图片上传` 需要在 `.env` 里面配置 `VITE_UPLOAD_BASEURL`:

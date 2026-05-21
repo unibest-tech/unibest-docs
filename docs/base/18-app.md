@@ -61,6 +61,8 @@ function foo() {
 > 思路：把整个 `unibest` 项目导入 `HBuilderX`，把本地原生插件放到项目根目录的 `nativeplugins` 目录，在 `src/manifest.json` 里配置好 `App 原生插件`，再把新增配置同步到 `manifest.config.ts`，最后制作包含该插件的自定义运行基座。
 >
 > 注意：标准基座不包含你自己的本地原生插件。出现“当前运行的基座不包含原生插件”时，通常是还在使用标准基座，或者自定义基座没有重新包含该插件。
+>
+> `pnpm build:app` 会把项目根目录的 `nativeplugins` 自动复制到 `dist/build/app/nativeplugins`。如果没有复制，请确认 `env/.env` 中的 `VITE_COPY_NATIVE_RES_ENABLE` 为 `true`。
 
 步骤：
 
@@ -80,6 +82,6 @@ function foo() {
 
      ![alt text](18-app-3.png)
 
-- 6. 发布时再执行 `pnpm build:app`，然后在 `HBuilderX` 中导入 `dist/build/app` 进行云打包或本地打包。`pnpm build:app` 只负责生成 App 项目文件，不会自动制作自定义基座。
+- 6. 发布时再执行 `pnpm build:app`，然后在 `HBuilderX` 中导入 `dist/build/app` 进行云打包或本地打包。`pnpm build:app` 只负责生成 App 项目文件并复制 `nativeplugins`，不会自动制作自定义基座。
 
 > 其他参看文章 [掘金教程 - Unibest 原生插件模块配置](https://juejin.cn/post/7496807547447427081)
