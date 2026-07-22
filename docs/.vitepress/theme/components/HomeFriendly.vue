@@ -16,7 +16,7 @@ const data = ref({
       icon: 'https://oss.laf.run/ukw0y1-site/sponsor/ruoyi-plus-uniapp.png',
       details:
         'Ruoyi-Plus-Uniapp 是AI原生Java全栈开发框架，基于 Spring Boot 3 + Vue 3 + UniApp，内置AI技能体系，覆盖后端、前端、移动端全流程开发。',
-      link: 'https://ruoyi.plus',
+      link: 'https://license.ruoyi.plus/flm/s/100004',
       iconWidth: '100px',
     },
     {
